@@ -1,4 +1,4 @@
-import { allPostsNewToOld } from '@/lib/contentLayerAdapter';
+import { allPosts, allPostsNewToOld } from '@/lib/contentLayerAdapter';
 
 export type PostForCommandPalette = {
   slug: string;
@@ -11,6 +11,7 @@ export const getCommandPalettePosts = (): PostForCommandPalette[] => {
     slug: post.slug,
     title: post.title,
     path: post.path,
+    description: post.description,
   }));
   return commandPalettePosts;
 };

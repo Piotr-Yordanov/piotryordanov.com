@@ -20,22 +20,8 @@ export default function CommandPaletteToggle() {
             aria-hidden="true"
             className="mr-1 flex-none"
           >
-            <path
-              d="m19 19-3.5-3.5"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            ></path>
-            <circle
-              cx="11"
-              cy="11"
-              r="6"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            ></circle>
+            <path d="m19 19-3.5-3.5" stroke="currentColor"></path>
+            <circle cx="11" cy="11" r="6" stroke="currentColor"></circle>
           </svg>
           Search...
           <span className="ml-2 flex-none pl-3 text-xs font-semibold">

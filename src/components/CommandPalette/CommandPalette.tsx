@@ -38,17 +38,17 @@ export default function CommandPalette({ children }: Props) {
 
   const actions = [
     // Page section
-    {
-      id: 'home',
-      name: t('home'),
-      keywords: 'home homepage index 首頁',
-      perform: () => router.push('/'),
-      icon: <HomeIcon className="h-6 w-6" />,
-      section: {
-        name: t('page'),
-        priority: Priority.HIGH,
-      },
-    },
+    // {
+    //   id: 'home',
+    //   name: t('home'),
+    //   keywords: 'home homepage index 首頁',
+    //   perform: () => router.push('/'),
+    //   icon: <HomeIcon className="h-6 w-6" />,
+    //   section: {
+    //     name: t('page'),
+    //     priority: Priority.HIGH,
+    //   },
+    // },
     // Search section
     // - Search posts
     {
@@ -61,31 +61,31 @@ export default function CommandPalette({ children }: Props) {
     },
     // Operation section
     // - Theme toggle
-    {
-      id: 'theme',
-      name: t('toggle-theme'),
-      keywords: 'change toggle theme mode color 切換 更換 顏色 主題 模式',
-      icon: <LightBulbIcon className="h-6 w-6" />,
-      section: t('operation'),
-    },
-    {
-      id: 'theme-light',
-      name: t('light-mode'),
-      keywords: 'theme light white mode color 顏色 主題 模式 明亮 白色',
-      perform: () => setTheme('light'),
-      icon: <SunIcon className="h-6 w-6" />,
-      parent: 'theme',
-      section: t('operation'),
-    },
-    {
-      id: 'theme-dark',
-      name: t('dark-mode'),
-      keywords: 'theme dark black mode color 顏色 主題 模式 暗黑 黑色 深夜',
-      perform: () => setTheme('dark'),
-      icon: <MoonIcon className="h-6 w-6" />,
-      parent: 'theme',
-      section: t('operation'),
-    },
+    // {
+    //   id: 'theme',
+    //   name: t('toggle-theme'),
+    //   keywords: 'change toggle theme mode color 切換 更換 顏色 主題 模式',
+    //   icon: <LightBulbIcon className="h-6 w-6" />,
+    //   section: t('operation'),
+    // },
+    // {
+    //   id: 'theme-light',
+    //   name: t('light-mode'),
+    //   keywords: 'theme light white mode color 顏色 主題 模式 明亮 白色',
+    //   perform: () => setTheme('light'),
+    //   icon: <SunIcon className="h-6 w-6" />,
+    //   parent: 'theme',
+    //   section: t('operation'),
+    // },
+    // {
+    //   id: 'theme-dark',
+    //   name: t('dark-mode'),
+    //   keywords: 'theme dark black mode color 顏色 主題 模式 暗黑 黑色 深夜',
+    //   perform: () => setTheme('dark'),
+    //   icon: <MoonIcon className="h-6 w-6" />,
+    //   parent: 'theme',
+    //   section: t('operation'),
+    // },
     // - Language toggle
     // {
     //   id: 'language',

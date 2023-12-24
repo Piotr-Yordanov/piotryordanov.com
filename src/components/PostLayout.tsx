@@ -1,11 +1,11 @@
 import { useRouter } from 'next/router';
 import { useTranslation } from 'next-i18next';
 
-import Comment from '@/components/Comment';
-import CustomLink from '@/components/CustomLink';
+// import Comment from '@/components/Comment';
+// import CustomLink from '@/components/CustomLink';
+// import TableOfContents from '@/components/TableOfContents';
 import PageTitle from '@/components/PageTitle';
 import PostBody from '@/components/PostBody';
-import TableOfContents from '@/components/TableOfContents';
 import formatDate from '@/lib/formatDate';
 
 export interface PostForPostLayout {
