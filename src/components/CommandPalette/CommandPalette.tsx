@@ -175,51 +175,49 @@ const ResultItem = forwardRef<Ref, ResultItemProps>(
     }, [action.ancestors, currentRootActionId]);
 
     return (
-      <html lang="en" className={`${inter.variable} ${roboto_mono.variable}`}>
-        <div
-          ref={ref}
-          className={`${
-            active
-              ? 'rounded-lg bg-primary-500 text-gray-100'
-              : 'text-gray-600 dark:text-gray-300'
-          } flex cursor-pointer items-center justify-between rounded-lg px-4 py-2`}
-        >
-          <div className="flex items-center gap-2 text-base">
-            {action.icon && action.icon}
-            <div className="flex flex-col">
-              <div className="line-clamp-1">
-                {ancestors.length > 0 &&
-                  ancestors.map((ancestor) => (
-                    <React.Fragment key={ancestor.id}>
-                      <span className="mr-3 opacity-70">{ancestor.name}</span>
-                      <span className="mr-3">&rsaquo;</span>
-                    </React.Fragment>
-                  ))}
-                <span>{action.name}</span>
-              </div>
-              {action.subtitle && (
-                <span className="text-sm">{action.subtitle}</span>
-              )}
+      <div
+        ref={ref}
+        className={`${
+          active
+            ? 'rounded-lg bg-primary-500 text-gray-100'
+            : 'text-gray-600 dark:text-gray-300'
+        } flex cursor-pointer items-center justify-between rounded-lg px-4 py-2`}
+      >
+        <div className="flex items-center gap-2 text-base">
+          {action.icon && action.icon}
+          <div className="flex flex-col">
+            <div className="line-clamp-1">
+              {ancestors.length > 0 &&
+                ancestors.map((ancestor) => (
+                  <React.Fragment key={ancestor.id}>
+                    <span className="mr-3 opacity-70">{ancestor.name}</span>
+                    <span className="mr-3">&rsaquo;</span>
+                  </React.Fragment>
+                ))}
+              <span>{action.name}</span>
             </div>
+            {action.subtitle && (
+              <span className="text-sm">{action.subtitle}</span>
+            )}
           </div>
-          {action.shortcut?.length ? (
-            <div aria-hidden className="grid grid-flow-col gap-2">
-              {action.shortcut.map((sc) => (
-                <kbd
-                  key={sc}
-                  className={`${
-                    active
-                      ? 'bg-white text-teal-500 dark:bg-gray-500 dark:text-gray-200'
-                      : 'bg-gray-200 text-gray-500 dark:bg-gray-600 dark:text-gray-400'
-                  } flex cursor-pointer items-center justify-between rounded-md px-3 py-2`}
-                >
-                  {sc}
-                </kbd>
-              ))}
-            </div>
-          ) : null}
         </div>
-      </html>
+        {action.shortcut?.length ? (
+          <div aria-hidden className="grid grid-flow-col gap-2">
+            {action.shortcut.map((sc) => (
+              <kbd
+                key={sc}
+                className={`${
+                  active
+                    ? 'bg-white text-teal-500 dark:bg-gray-500 dark:text-gray-200'
+                    : 'bg-gray-200 text-gray-500 dark:bg-gray-600 dark:text-gray-400'
+                } flex cursor-pointer items-center justify-between rounded-md px-3 py-2`}
+              >
+                {sc}
+              </kbd>
+            ))}
+          </div>
+        ) : null}
+      </div>
     );
   }
 );

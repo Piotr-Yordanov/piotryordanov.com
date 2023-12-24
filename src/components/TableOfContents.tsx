@@ -84,38 +84,42 @@ const TableOfContents = ({ source }: Props) => {
   useIntersectionObserver(setActiveId);
 
   return (
-    <div className="mt-10">
-      <p className="mb-5 text-lg font-semibold text-gray-900 transition-colors dark:text-gray-100">
-        {t('table-of-contents').toUpperCase()}
-      </p>
-      <div className="flex flex-col items-start justify-start">
-        {headings.map((heading, index) => {
-          return (
-            <button
-              key={index}
-              type="button"
-              className={clsx(
-                heading.id === activeId
-                  ? 'font-medium text-primary-500 hover:text-primary-600 dark:hover:text-primary-400'
-                  : 'font-normal text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200',
-                heading.level === 3 && 'pl-4',
-                'mb-3 text-left text-sm transition-colors hover:underline'
-              )}
-              onClick={(e) => {
-                e.preventDefault();
-                document.querySelector(`#${heading.id}`)?.scrollIntoView({
-                  behavior: 'smooth',
-                  block: 'start',
-                  inline: 'nearest',
-                });
-              }}
-            >
-              {heading.text}
-            </button>
-          );
-        })}
+    <aside>
+      <div className="hidden lg:sticky lg:top-24 lg:col-span-1 lg:block">
+        <div className="mt-10">
+          <p className="mb-5 text-lg font-semibold text-gray-900 transition-colors dark:text-gray-100">
+            {t('table-of-contents').toUpperCase()}
+          </p>
+          <div className="flex flex-col items-start justify-start">
+            {headings.map((heading, index) => {
+              return (
+                <button
+                  key={index}
+                  type="button"
+                  className={clsx(
+                    heading.id === activeId
+                      ? 'font-medium text-primary-500 hover:text-primary-600 dark:hover:text-primary-400'
+                      : 'font-normal text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200',
+                    heading.level === 3 && 'pl-4',
+                    'mb-3 text-left text-sm transition-colors hover:underline'
+                  )}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    document.querySelector(`#${heading.id}`)?.scrollIntoView({
+                      behavior: 'smooth',
+                      block: 'start',
+                      inline: 'nearest',
+                    });
+                  }}
+                >
+                  {heading.text}
+                </button>
+              );
+            })}
+          </div>
+        </div>
       </div>
-    </div>
+    </aside>
   );
 };
 

@@ -138,6 +138,7 @@ const PostPage: NextPage<Props> = ({
   const ogImage = getPostOGImage(socialImage);
 
   const MDXContent = useMDXComponent(code);
+  console.log(mdxComponents);
 
   return (
     <LayoutPerPage>

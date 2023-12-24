@@ -32,7 +32,7 @@ const literata = Literata({
 
 const LayoutWrapper = ({ children }: Props) => {
   return (
-    <div className="flex min-h-screen w-full flex-col justify-between">
+    <div className="flex min-h-screen w-full flex-col justify-between bg-[#f2f5fa] ">
       <div
         className={`${lato.variable} ${literata.variable} ${inter.variable} ${roboto_mono.variable}`}
       >

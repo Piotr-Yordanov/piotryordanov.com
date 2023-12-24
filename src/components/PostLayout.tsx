@@ -44,39 +44,36 @@ export default function PostLayout({
   return (
     <article>
       <div className="divide-y divide-gray-200 transition-colors dark:divide-gray-700">
-        <header className="py-6">
-          <div className="space-y-1 text-center">
-            <div className="mb-4">
-              <PageTitle>{title}</PageTitle>
-            </div>
-
-            <dl className="space-y-10">
-              <div>
-                <dt className="sr-only">{t('published-time')}</dt>
-                <dd className="text-base font-medium leading-6 text-gray-500 transition-colors dark:text-gray-400">
-                  <time dateTime={date}>{formatDate(date, locale)}</time>
-                </dd>
-              </div>
-            </dl>
-          </div>
-        </header>
-
         <div
           className="pb-8 transition-colors lg:grid lg:grid-cols-4 lg:gap-x-6"
           style={{ gridTemplateRows: 'auto 1fr' }}
         >
-          <div className="divide-y divide-gray-200 pb-8 pt-10 transition-colors lg:col-span-3 dark:divide-gray-700">
+          <div className="divide-y divide-gray-200 pb-8 pt-16 transition-colors lg:col-span-3 lg:border-r-[1px] dark:divide-gray-700">
+            <header className="pb-4 font-mono">
+              <div className="space-y-1">
+                <dl className="space-y-10">
+                  <div>
+                    <dt className="sr-only">{t('published-time')}</dt>
+                    <dd className="text-base font-medium leading-6 text-blue-500 transition-colors">
+                      <time dateTime={date}>{formatDate(date, locale)}</time>
+                    </dd>
+                  </div>
+                </dl>
+
+                <div className="mb-4">
+                  <PageTitle>{title}</PageTitle>
+                </div>
+              </div>
+            </header>
             <PostBody>{children}</PostBody>
           </div>
 
-          {/* DESKTOP TABLE OF CONTENTS */}
-          <aside>
-            <div className="hidden lg:sticky lg:top-24 lg:col-span-1 lg:block">
-              <TableOfContents source={raw} />
-            </div>
-          </aside>
+          {/* DESKTOP TABLE OF CONTENTS 
+                <TableOfContents source={raw} />
+            */}
         </div>
 
+        {/*
         <div className="divide-y divide-gray-200 pb-8 transition-colors dark:divide-gray-700">
           <Comment />
 
@@ -113,6 +110,8 @@ export default function PostLayout({
             </div>
           </footer>
         </div>
+
+         */}
       </div>
     </article>
   );
