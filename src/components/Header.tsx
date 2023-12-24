@@ -12,7 +12,7 @@ export default function Header() {
   // <ThemeSwitch />
 
   return (
-    <header className="sticky top-0 z-10 border-b border-slate-900/10 py-3 font-literata backdrop-blur transition-colors dark:border-slate-50/[0.06] dark:bg-gray-900/60">
+    <header className="sticky top-0 z-10 border-b border-slate-900/10 py-3 font-mono backdrop-blur transition-colors dark:border-slate-50/[0.06] dark:bg-gray-900/60">
       <SectionContainer>
         <div className="flex items-baseline justify-between">
           <div>

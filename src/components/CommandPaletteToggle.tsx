@@ -4,27 +4,45 @@ export default function CommandPaletteToggle() {
   const { query } = useKBar();
 
   return (
-    <div className="">
-      <button
-        aria-label="Toggle Command Palette"
-        type="button"
-        className="hidden h-12 w-12 rounded px-4 py-3 transition-colors hover:bg-gray-100 sm:block dark:hover:bg-gray-800"
-        onClick={query.toggle}
-      >
-        <svg
-          fill="none"
-          className="h-4 w-4 text-gray-900 transition-colors dark:text-gray-100"
-          viewBox="0 0 18 18"
+    <div
+      className="flex cursor-pointer flex-row p-[4px] text-sm text-gray-400"
+      onClick={query.toggle}
+    >
+      <div className="pointer-events-auto relative bg-white dark:bg-slate-900">
+        <button
+          type="button"
+          className="dark:highlight-white/5 hidden w-full items-center rounded-md py-1.5 pl-2 pr-3 text-sm leading-6 text-slate-400 shadow-sm ring-1 ring-slate-900/10 hover:ring-slate-300 lg:flex dark:bg-slate-800 dark:hover:bg-slate-700"
         >
-          <path
-            stroke="currentColor"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="1.5"
-            d="M14.333 1a2.667 2.667 0 0 0-2.666 2.667v10.666a2.667 2.667 0 1 0 2.666-2.666H3.667a2.667 2.667 0 1 0 2.666 2.666V3.667a2.667 2.667 0 1 0-2.666 2.666h10.666a2.667 2.667 0 0 0 0-5.333Z"
-          />
-        </svg>
-      </button>
+          <svg
+            width="24"
+            height="24"
+            fill="none"
+            aria-hidden="true"
+            className="mr-1 flex-none"
+          >
+            <path
+              d="m19 19-3.5-3.5"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></path>
+            <circle
+              cx="11"
+              cy="11"
+              r="6"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></circle>
+          </svg>
+          Search...
+          <span className="ml-2 flex-none pl-3 text-xs font-semibold">
+            Ctrl K
+          </span>
+        </button>
+      </div>
     </div>
   );
 }
