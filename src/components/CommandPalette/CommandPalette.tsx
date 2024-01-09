@@ -7,6 +7,7 @@ import {
   LightBulbIcon,
   MagnifyingGlassIcon,
   MoonIcon,
+  NewspaperIcon,
   SunIcon,
 } from '@heroicons/react/24/outline';
 import {
@@ -24,6 +25,8 @@ import { useRouter } from 'next/router';
 import { useTranslation } from 'next-i18next';
 import { useTheme } from 'next-themes';
 import React, { forwardRef, useMemo } from 'react';
+import { GiGrandPiano } from 'react-icons/gi';
+import { LuCandlestickChart } from 'react-icons/lu';
 
 import { KBarSearch } from './KBarSearch';
 
@@ -38,26 +41,53 @@ export default function CommandPalette({ children }: Props) {
 
   const actions = [
     // Page section
-    // {
-    //   id: 'home',
-    //   name: t('home'),
-    //   keywords: 'home homepage index 首頁',
-    //   perform: () => router.push('/'),
-    //   icon: <HomeIcon className="h-6 w-6" />,
-    //   section: {
-    //     name: t('page'),
-    //     priority: Priority.HIGH,
-    //   },
-    // },
     // Search section
     // - Search posts
     {
-      id: 'search-posts',
-      name: t('posts'),
+      id: 'search-articles',
+      name: t('Articles'),
       keywords:
         'search find posts writing words blog articles thoughts 搜尋 尋找 文章 寫作 部落格',
       icon: <MagnifyingGlassIcon className="h-6 w-6" />,
-      section: t('search'),
+      section: {
+        name: t('search'),
+        priority: Priority.HIGH,
+      },
+    },
+    {
+      id: 'home',
+      name: t('home'),
+      keywords: 'home homepage index 首頁',
+      perform: () => router.push('/'),
+      icon: <HomeIcon className="h-6 w-6" />,
+      section: {
+        name: t('page'),
+        priority: Priority.NORMAL,
+      },
+    },
+    {
+      id: 'trading',
+      name: t('Trading'),
+      keywords: 'trading',
+      perform: () => router.push('/trading'),
+      icon: <LuCandlestickChart className="h-6 w-6" />,
+      section: t('page'),
+    },
+    {
+      id: 'articles',
+      name: t('Articles'),
+      keywords: 'articles',
+      perform: () => router.push('/articles'),
+      icon: <NewspaperIcon className="h-6 w-6" />,
+      section: t('page'),
+    },
+    {
+      id: 'music',
+      name: t('Music'),
+      keywords: 'music',
+      perform: () => router.push('/music'),
+      icon: <GiGrandPiano className="h-6 w-6" />,
+      section: t('page'),
     },
     // Operation section
     // - Theme toggle

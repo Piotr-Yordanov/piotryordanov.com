@@ -11,7 +11,7 @@ export default function CommandPaletteToggle() {
       <div className="pointer-events-auto relative bg-white dark:bg-slate-900">
         <button
           type="button"
-          className="dark:highlight-white/5 hidden w-full items-center rounded-md py-1.5 pl-2 pr-3 text-sm leading-6 text-slate-400 shadow-sm ring-1 ring-slate-900/10 hover:ring-slate-300 lg:flex dark:bg-slate-800 dark:hover:bg-slate-700"
+          className="dark:highlight-white/5 flex w-full items-center rounded-md py-1.5 pl-2 pr-3 text-sm leading-6 text-slate-400 shadow-sm ring-1 ring-slate-900/10 hover:ring-slate-300 lg:flex dark:bg-slate-800 dark:hover:bg-slate-700"
         >
           <svg
             width="24"
