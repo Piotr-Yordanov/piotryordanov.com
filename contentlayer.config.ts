@@ -30,6 +30,11 @@ export const Post = defineDocumentType(() => ({
     socialImage: {
       type: 'string',
     },
+    tags: {
+      type: 'list',
+      of: { type: 'string' },
+      required: true,
+    },
     language: {
       type: 'enum',
       options: LOCALES,
