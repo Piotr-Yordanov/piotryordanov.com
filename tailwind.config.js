@@ -20,8 +20,7 @@ module.exports = {
         literata: ['var(--font-literata)'],
       },
       colors: {
-        primary: colors.red,
-        gray: colors.neutral,
+        primary: colors.red[500],
       },
       typography: (theme) => ({
         DEFAULT: {

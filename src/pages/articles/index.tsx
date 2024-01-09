@@ -23,7 +23,7 @@ const Section = (index: number) => {
         console.log(post);
         return (
           <div
-            className="p-4 py-6 text-black underline decoration-red-600 underline-offset-2 hover:text-red-800"
+            className="p-4 py-6 text-black underline decoration-primary underline-offset-2 hover:text-primary"
             key={i}
           >
             <CustomLink href={post.path}>

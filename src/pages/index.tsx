@@ -12,10 +12,10 @@ const Home: NextPage = () => {
         <div className="text-center font-inter">
           <h1 className="text-3xl tracking-tight text-[#001C46] sm:text-8xl">
             <div className="inline">Cultivate</div>
-            <TbAlpha className="inline text-4xl text-red-600 sm:text-8xl lg:ml-4" />
+            <TbAlpha className="inline text-4xl text-primary sm:text-8xl lg:ml-4" />
             in the <br />
             financial markets
-            <LuCandlestickChart className="ml-4 inline text-3xl text-cyan-600 sm:text-7xl lg:ml-6" />
+            <LuCandlestickChart className="ml-4 inline text-3xl text-indigo-500 sm:text-7xl lg:ml-6" />
           </h1>
         </div>
       </div>

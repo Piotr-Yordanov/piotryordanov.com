@@ -1,20 +1,19 @@
-const fqdn = 'https://nextjs-tailwind-contentlayer-blog-starter.vercel.app';
+const fqdn = 'https://piotryordanov.com';
 const logoPath = '/logo.png';
-const bannerPath = '/og-image.png';
+const bannerPath = '/logo.png';
 
 export const siteConfigs = {
-  title: 'Next.js Tailwind Contentlayer Blog Starter',
-  titleShort: 'Next Blog',
-  description:
-    'Blog starter template with modern frontend technologies like Next.js, Tailwind CSS, Contentlayer, i18Next',
-  author: 'Tony Stark',
-  credit: 'Stark Industries',
+  title: 'Piotr Yordanov',
+  titleShort: 'Piotr Yordanov',
+  description: 'Piotr Yordanov -- Cultivate Alpha in the financial markets',
+  author: 'Piotr Yordanov',
+  credit: 'Piotr Yordanov',
   email: 'stark@example.com',
   fqdn: fqdn,
   logoPath: logoPath,
   logoUrl: fqdn + logoPath,
   bannerPath: bannerPath,
   bannerUrl: fqdn + bannerPath,
-  twitterID: '@EasonChang_me',
+  twitterID: '@piotr_yordanov',
   datePublished: '2022-09-01',
 };

@@ -1,9 +1,9 @@
 #nprogress {
   .bar {
-    @apply h-1 bg-primary-500;
+    @apply h-1 bg-primary;
   }
 
   .peg {
-    @apply shadow-[0_0_10px] shadow-primary-500;
+    @apply shadow-[0_0_10px] shadow-primary;
   }
 }

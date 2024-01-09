@@ -150,8 +150,8 @@ function CommandBar() {
   return (
     <KBarPortal>
       <KBarPositioner className="z-20 flex items-center bg-gray-400/70 p-2 backdrop-blur-sm dark:bg-gray-900/80">
-        <KBarAnimator className="box-content w-full max-w-[600px] overflow-hidden rounded-xl border border-gray-400 bg-white/80 p-2 dark:border-gray-600 dark:bg-gray-700/80">
-          <KBarSearch className="flex h-16 w-full bg-transparent px-4 outline-none" />
+        <KBarAnimator className="bg-white/80 box-content w-full max-w-[600px] overflow-hidden rounded-xl border border-gray-400 p-2 dark:border-gray-600 dark:bg-gray-700/80">
+          <KBarSearch className="bg-transparent flex h-16 w-full px-4 outline-none" />
           <RenderResults />
         </KBarAnimator>
       </KBarPositioner>
@@ -220,7 +220,7 @@ const ResultItem = forwardRef<Ref, ResultItemProps>(
         ref={ref}
         className={`${
           active
-            ? 'rounded-lg bg-primary-500 text-gray-100'
+            ? 'rounded-lg bg-primary text-gray-100'
             : 'text-gray-600 dark:text-gray-300'
         } flex cursor-pointer items-center justify-between rounded-lg px-4 py-2`}
       >

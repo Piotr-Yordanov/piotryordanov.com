@@ -31,7 +31,7 @@ export default function Header({ type }) {
                 <CustomLink
                   href={link.href}
                   key={link.title}
-                  className="block px-2 py-4 tracking-widest text-gray-900 transition-colors hover:text-red-500 "
+                  className="block px-2 py-4 tracking-widest text-gray-900 transition-colors hover:text-primary "
                 >
                   {link.title}
                 </CustomLink>
