@@ -8,7 +8,6 @@ import {
   getCommandPalettePosts,
   PostForCommandPalette,
 } from '@/components/CommandPalette/getCommandPalettePosts';
-import { useCommandPalettePostActions } from '@/components/CommandPalette/useCommandPalettePostActions';
 import LayoutPerPage from '@/components/LayoutPerPage';
 import PostLayout, {
   PostForPostLayout,
@@ -118,12 +117,9 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
   };
 };
 
-const PostPage: NextPage<Props> = ({
-  post,
-  prevPost,
-  nextPost,
-  commandPalettePosts,
-}) => {
+const PostPage: NextPage<Props> = (props) => {
+  const { post, prevPost, nextPost, commandPalettePosts } = props;
+
   const {
     description,
     title,
@@ -140,7 +136,7 @@ const PostPage: NextPage<Props> = ({
   const MDXContent = useMDXComponent(code);
 
   return (
-    <LayoutPerPage>
+    <div>
       <NextSeo
         title={title}
         description={description}
@@ -175,7 +171,7 @@ const PostPage: NextPage<Props> = ({
       <PostLayout post={post} prevPost={prevPost} nextPost={nextPost}>
         <MDXContent components={mdxComponents} />
       </PostLayout>
-    </LayoutPerPage>
+    </div>
   );
 };
 

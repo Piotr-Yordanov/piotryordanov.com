@@ -33,6 +33,7 @@ import { KBarSearch } from './KBarSearch';
 type Props = {
   children: React.ReactNode;
 };
+import { allPosts, Post } from 'contentlayer/generated';
 
 export default function CommandPalette({ children }: Props) {
   const { t } = useTranslation(['common']);
@@ -126,6 +127,17 @@ export default function CommandPalette({ children }: Props) {
     //   section: t('operation'),
     // },
   ];
+
+  allPosts.map((post) => {
+    actions.push({
+      id: post.slug,
+      name: post.title,
+      perform: () => router.push(post.path),
+      section: t('search-articles'),
+      parent: 'search-articles',
+    });
+  });
+  console.log(actions);
 
   return (
     <KBarProvider actions={actions}>
