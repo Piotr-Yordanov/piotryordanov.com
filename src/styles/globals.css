@@ -6,3 +6,12 @@
   color: black;
   font-weight: 600;
 }
+.cursorBlink{
+    font-weight:bold;
+    font-size:30px; 
+    width:5px;
+    animation:blink 1s infinite
+}
+@keyframes blink{from,to{color:transparent}50%{color:red}}
+
+@import "./divider.css";
