@@ -17,6 +17,10 @@ export default function Footer() {
             href={footerConfigs.socialLinks.facebook}
           />
           <SocialIcon
+            kind="instagram"
+            href={footerConfigs.socialLinks.instagram}
+          />
+          <SocialIcon
             kind="linkedin"
             href={footerConfigs.socialLinks.linkedin}
           />

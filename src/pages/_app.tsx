@@ -32,7 +32,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   }, []);
 
   return (
-    <ThemeProvider attribute="class">
+    <ThemeProvider attribute="class" defaultTheme="light">
       <CommandPalette>
         <DefaultSeo
           titleTemplate={`%s | ${siteConfigs.titleShort}`}
