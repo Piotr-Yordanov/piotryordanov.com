@@ -1,7 +1,8 @@
+import { Inter, Lato, Literata, Roboto_Mono } from '@next/font/google';
+
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import SectionContainer from '@/components/SectionContainer';
-import { Inter, Lato, Literata, Roboto_Mono } from '@next/font/google';
 
 type Props = {
   children: React.ReactNode;
