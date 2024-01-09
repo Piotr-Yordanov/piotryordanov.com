@@ -44,11 +44,23 @@ export const getStaticProps: GetStaticProps<Props> = async (context) => {
     },
   };
 };
+import { TbAlpha } from 'react-icons/tb';
 
 const Home: NextPage<Props> = ({ posts, commandPalettePosts }) => {
   useCommandPalettePostActions(commandPalettePosts);
 
-  return <LayoutPerPage>Hello world</LayoutPerPage>;
+  return (
+    <LayoutPerPage>
+      <div className="py-16 sm:py-20 lg:py-48">
+        <div className="text-center font-inter">
+          <h1 className="text-3xl tracking-tight text-gray-900 sm:text-8xl">
+            <div className="inline">Finding and cultivating</div>
+            <TbAlpha className="inline inline text-4xl text-red-600 sm:text-8xl lg:ml-4" />
+          </h1>
+        </div>
+      </div>
+    </LayoutPerPage>
+  );
 };
 
 export default Home;
