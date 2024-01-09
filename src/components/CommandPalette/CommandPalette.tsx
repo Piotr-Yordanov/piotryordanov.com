@@ -137,7 +137,6 @@ export default function CommandPalette({ children }: Props) {
       parent: 'search-articles',
     });
   });
-  console.log(actions);
 
   return (
     <KBarProvider actions={actions}>

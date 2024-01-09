@@ -22,10 +22,10 @@ export default function PostList({ posts = [] }: Props) {
   return (
     <ul className="divide-y divide-gray-200 transition-colors dark:divide-gray-700">
       {!posts.length && 'No posts found.'}
-      {posts.map((post) => {
+      {posts.map((post, index) => {
         const { slug, date, title, description, path, tags } = post;
         return (
-          <li key={slug} className="group transition-colors">
+          <li key={index} className="group transition-colors">
             <CustomLink href={path}>
               <article className="space-y-2 rounded-xl p-4 transition-colors group-hover:bg-gray-100 xl:grid xl:grid-cols-4 xl:items-baseline  xl:space-y-0 dark:group-hover:bg-gray-800">
                 <dl>

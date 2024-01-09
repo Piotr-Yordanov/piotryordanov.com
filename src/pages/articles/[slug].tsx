@@ -128,7 +128,6 @@ const PostPage: NextPage<Props> = (props) => {
     socialImage,
     body: { code },
   } = post;
-  useCommandPalettePostActions(commandPalettePosts);
 
   const url = siteConfigs.fqdn + path;
   const ogImage = getPostOGImage(socialImage);

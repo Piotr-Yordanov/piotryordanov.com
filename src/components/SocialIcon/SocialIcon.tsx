@@ -51,7 +51,7 @@ const SocialIcon = ({ kind, href }: Props) => {
           kind === 'github' && 'hover:text-gray-500 dark:hover:text-gray-400',
           kind === 'instagram' && 'hover:text-gray-500',
           kind === 'linkedin' &&
-            'h-[21px] w-[24px] hover:text-[#0e76a8] dark:hover:text-[#0e76a8]',
+            'h-[20px] w-[20px] hover:text-[#0e76a8] dark:hover:text-[#0e76a8]',
           kind === 'twitter' &&
             'hover:text-[#1DA1F2] dark:hover:text-[#1DA1F2]',
           kind === 'youtube' && 'hover:text-red-500 dark:hover:text-red-500'
