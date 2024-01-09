@@ -12,10 +12,7 @@ export default function Footer() {
             href={`mailto:${footerConfigs.socialLinks.email}`}
           />
           <SocialIcon kind="github" href={footerConfigs.socialLinks.github} />
-          <SocialIcon
-            kind="facebook"
-            href={footerConfigs.socialLinks.facebook}
-          />
+          <SocialIcon kind="youtube" href={footerConfigs.socialLinks.youtube} />
           <SocialIcon
             kind="instagram"
             href={footerConfigs.socialLinks.instagram}
