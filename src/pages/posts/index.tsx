@@ -48,7 +48,31 @@ export const getStaticProps: GetStaticProps<Props> = async (context) => {
 const Home: NextPage<Props> = ({ posts, commandPalettePosts }) => {
   useCommandPalettePostActions(commandPalettePosts);
 
-  return <LayoutPerPage>Hello world</LayoutPerPage>;
+  return (
+    <LayoutPerPage>
+      <ArticleJsonLd
+        type="Blog"
+        url={siteConfigs.fqdn}
+        title={siteConfigs.title}
+        images={[siteConfigs.bannerUrl]}
+        datePublished={siteConfigs.datePublished}
+        authorName={siteConfigs.author}
+        description={siteConfigs.description}
+      />
+
+      <div className="prose my-12 space-y-2 transition-colors md:prose-lg dark:prose-dark md:space-y-5">
+        <h1 className="text-center sm:text-left">Intro Title</h1>
+      </div>
+
+      <div className="my-4 divide-y divide-gray-200 transition-colors dark:divide-gray-700">
+        <div className="prose prose-lg my-8 dark:prose-dark">
+          <h2>latest-posts</h2>
+        </div>
+
+        <PostList posts={posts} />
+      </div>
+    </LayoutPerPage>
+  );
 };
 
 export default Home;
