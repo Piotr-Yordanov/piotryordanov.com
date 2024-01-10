@@ -16,8 +16,8 @@ const Section = (index: number) => {
   return (
     <div className="rounded-xl border-2 border-slate-900/30 font-mono">
       <div className="flex rounded-t-xl border-b border-slate-900/10 border-b-gray-200 bg-white p-4 py-6">
-        <div className="pt-1">{section.icon}</div>
-        <div className="ml-2">{section.name}</div>
+        <div className="">{section.icon}</div>
+        <div className="ml-2 text-xl">{section.name}</div>
       </div>
       {filteredPosts.map((post, i) => {
         console.log(post);
@@ -40,10 +40,14 @@ const sections = [
   {
     tag: 'quant',
     name: 'Quantitative Finance',
-    icon: <LuCandlestickChart />,
+    icon: <LuCandlestickChart className="h-7 w-7" />,
   },
-  { tag: 'mindfulness', name: 'Mindfulness', icon: <GiMeditation /> },
-  { tag: 'coding', name: 'Coding', icon: <FaCode /> },
+  {
+    tag: 'mindfulness',
+    name: 'Mindfulness',
+    icon: <GiMeditation className="h-7 w-7" />,
+  },
+  { tag: 'coding', name: 'Coding', icon: <FaCode className="h-7 w-7" /> },
 ];
 
 const Home: NextPage = (props) => {

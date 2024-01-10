@@ -6,7 +6,7 @@ const SectionIntroTitle = ({ title, content }) => {
   return (
     <div className="my-10 text-left">
       <div className="prose mx-auto w-full text-base leading-loose tracking-wide ">
-        <div className="mx-auto mb-20 w-96 text-center text-2xl ">
+        <div className="mx-auto mb-10 w-96 text-center text-2xl ">
           Hi - Im Piotr Yordanov, a full stack developer, and a crypto trader.
         </div>
         <div className="" dangerouslySetInnerHTML={{ __html: content }} />
