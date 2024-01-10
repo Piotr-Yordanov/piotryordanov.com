@@ -7,7 +7,8 @@ const SectionIntroTitle = ({ title, content }) => {
     <div className="my-10 text-left">
       <div className="prose mx-auto w-full text-base leading-loose tracking-wide ">
         <div className="mx-auto mb-10 w-96 text-center text-2xl ">
-          Hi - Im Piotr Yordanov, a full stack developer, and a crypto trader.
+          Hi - Im Piotr Yordanov <br /> I'm a quantitative trader, writer, and
+          pianist.
         </div>
         <div className="" dangerouslySetInnerHTML={{ __html: content }} />
       </div>
