@@ -99,6 +99,7 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
       code: postFull.body.code,
       raw: postFull.body.raw,
     },
+    tags: postFull.tags,
   };
 
   if (!post) {
@@ -135,7 +136,7 @@ const PostPage: NextPage<Props> = (props) => {
   const MDXContent = useMDXComponent(code);
 
   return (
-    <div className="container pt-0">
+    <div className="container pt-0 ">
       <NextSeo
         title={title}
         description={description}

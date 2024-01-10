@@ -48,7 +48,7 @@ export default function PostLayout({
           className="pb-8 transition-colors lg:grid lg:grid-cols-4 lg:gap-x-6"
           style={{ gridTemplateRows: 'auto 1fr' }}
         >
-          <div className="divide-y divide-gray-200 pb-8 pt-16 transition-colors lg:col-span-3 lg:border-r-[1px] dark:divide-gray-700">
+          <div className="divide-y divide-gray-200 pb-8 pt-16 transition-colors dark:divide-gray-700 lg:col-span-3 lg:border-r-[1px]">
             <header className="pb-4 font-mono">
               <div className="space-y-1">
                 <dl className="space-y-10">
@@ -64,6 +64,7 @@ export default function PostLayout({
                   <PageTitle>{title}</PageTitle>
                 </div>
               </div>
+              <div className="">#{post.tags}</div>
             </header>
             <PostBody>{children}</PostBody>
           </div>
@@ -110,7 +111,6 @@ export default function PostLayout({
             </div>
           </footer>
         </div>
-
          */}
       </div>
     </article>
