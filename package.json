@@ -17,6 +17,7 @@
     "clsx": "^1.2.1",
     "contentlayer": "^0.3.4",
     "date-fns": "^2.29.2",
+    "esbuild": "^0.18.0",
     "feed": "^4.2.2",
     "github-slugger": "^1.4.0",
     "image-size": "^1.0.2",
@@ -34,7 +35,7 @@
     "rehype-code-titles": "^1.1.0",
     "rehype-prism-plus": "^1.5.0",
     "rehype-slug": "^5.0.1",
-    "sharp": "^0.31.0",
+    "sharp": "^0.33.1",
     "unist-util-visit": "^4.1.1"
   },
   "devDependencies": {
@@ -52,7 +53,6 @@
     "@typescript-eslint/eslint-plugin": "^5.35.1",
     "@typescript-eslint/parser": "^5.35.1",
     "autoprefixer": "^10.4.8",
-    "esbuild": "^0.15.6",
     "eslint": "^8.23.0",
     "eslint-config-eason": "0.0.11",
     "eslint-config-next": "12.2.5",
