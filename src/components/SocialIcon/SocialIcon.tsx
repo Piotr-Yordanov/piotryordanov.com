@@ -1,9 +1,8 @@
 import clsx from 'clsx';
 import { AiOutlineInstagram } from 'react-icons/ai';
 import { CiMail } from 'react-icons/ci';
-import { FaXTwitter } from 'react-icons/fa6';
+import { FaL, FaLinkedinIn, FaXTwitter } from 'react-icons/fa6';
 import { FiFacebook, FiYoutube as Youtube } from 'react-icons/fi';
-import { SlSocialLinkedin } from 'react-icons/sl';
 import { VscGithubAlt } from 'react-icons/vsc';
 
 // Icons taken from: https://simpleicons.org/
@@ -14,7 +13,7 @@ const components: { [key: string]: SVGComponent } = {
   mail: CiMail as SVGComponent,
   github: VscGithubAlt as SVGComponent,
   facebook: FiFacebook as SVGComponent,
-  linkedin: SlSocialLinkedin as SVGComponent,
+  linkedin: FaLinkedinIn as SVGComponent,
   twitter: FaXTwitter as SVGComponent,
   instagram: AiOutlineInstagram as SVGComponent,
   youtube: Youtube as SVGComponent,
@@ -45,8 +44,7 @@ const SocialIcon = ({ kind, href }: Props) => {
       <span className="sr-only">{kind}</span>
       <SocialSvg
         className={clsx(
-          'hover:text-primary h-[24px] w-[24px] text-gray-700 transition-colors dark:text-gray-200',
-          kind === 'linkedin' && 'h-[20px] w-[20px]'
+          'h-[20px] w-[20px] text-gray-700 transition-colors hover:text-primary dark:text-gray-200'
         )}
       />
     </a>

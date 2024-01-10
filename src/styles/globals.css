@@ -23,5 +23,7 @@
   .text { 
     @apply text-xl font-mono;
   }
-  /* ... */
+  .container {
+    @apply max-w-7xl  mx-auto;
+  }
 }

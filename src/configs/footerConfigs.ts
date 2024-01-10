@@ -1,5 +1,5 @@
 export const footerConfigs = {
-  credit: 'Piotr Yordanov',
+  credit: 'Piotr',
   socialLinks: {
     email: 'piotr@piotryordanov.com',
     github: 'https://github.com/piotryordanov',
