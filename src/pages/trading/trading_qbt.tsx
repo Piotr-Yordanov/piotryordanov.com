@@ -15,7 +15,7 @@ const QBT = () => {
       <div className="container" id="quantbt">
         <div className="py-4">
           <div className="title text-center">QuantBT</div>
-          <div className="text">
+          <div className="text mb-10">
             QBT is a backtesting library written in python that uses numba to
             achieve fast execution. It is built with traders in mind, and
             focuses on providing simple API to go from backtests to live

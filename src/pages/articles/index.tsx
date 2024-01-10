@@ -19,19 +19,20 @@ const Section = (index: number) => {
         <div className="">{section.icon}</div>
         <div className="ml-2 text-xl">{section.name}</div>
       </div>
-      {filteredPosts.map((post, i) => {
-        console.log(post);
-        return (
-          <div
-            className="p-4 py-6 text-black underline decoration-primary underline-offset-2 hover:text-primary"
-            key={i}
-          >
-            <CustomLink href={post.path}>
-              <div key={i}>{post.title}</div>
-            </CustomLink>
-          </div>
-        );
-      })}
+      <div className="py-2">
+        {filteredPosts.map((post, i) => {
+          return (
+            <div
+              className="p-4 py-2 text-black underline decoration-primary underline-offset-2 hover:text-primary"
+              key={i}
+            >
+              <CustomLink href={post.path}>
+                <div key={i}>{post.title}</div>
+              </CustomLink>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };
@@ -53,11 +54,13 @@ const sections = [
 const Home: NextPage = (props) => {
   return (
     <LayoutPerPage>
-      <div className="prose my-12 space-y-2 transition-colors md:prose-lg dark:prose-dark md:space-y-5">
-        <h1 className="text-center font-mono sm:text-left">Article Topics</h1>
-      </div>
-      <div className="grid grid-cols-2 gap-4">
-        {sections.map((section, index) => Section(index))}
+      <div className="container">
+        <div className="prose my-12 space-y-2 transition-colors dark:prose-dark md:prose-lg md:space-y-5">
+          <h1 className="text-center font-mono sm:text-left">Article Topics</h1>
+        </div>
+        <div className="grid grid-cols-2 gap-4">
+          {sections.map((section, index) => Section(index))}
+        </div>
       </div>
     </LayoutPerPage>
   );

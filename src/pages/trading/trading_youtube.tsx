@@ -1,3 +1,4 @@
+import CustomLink from '@/components/CustomLink';
 import SimpleDivider from '@/components/SimpleDivider';
 
 const YoutubeChannel = () => {
@@ -14,8 +15,15 @@ const YoutubeChannel = () => {
           <div className="pb-4">
             <div className="text mb-4 text-center">Live Scalping</div>
             <div className="mb-4 text-center text-sm">
-              Manual trading is hard. It's very hard. It takes, mindfulness,
-              practice, discipline and patience. But, that is how I started.
+              Manual trading is hard.
+              <CustomLink
+                href="/articles/manual-trading-is-hard"
+                className="mx-1 text-primary"
+              >
+                It's very hard.
+              </CustomLink>
+              It takes, mindfulness, practice, discipline and patience. But,
+              that is how I started.
             </div>
           </div>
           <iframe

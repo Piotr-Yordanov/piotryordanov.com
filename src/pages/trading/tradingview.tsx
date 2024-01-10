@@ -4,7 +4,7 @@ const TVCharts = [
   {
     name: 'MA Breakout',
     description:
-      'Script changes the body color of candles that go through a moving average which can be either a sign of continuation after a pullback in a downtrend, or a reversal otherwise.',
+      'Change the body color of candles that go through a moving average which can be a sign of continuation or a reversal.',
     id: 'UiR3RlCZ',
   },
   {

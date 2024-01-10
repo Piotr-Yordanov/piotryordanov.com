@@ -135,7 +135,7 @@ const PostPage: NextPage<Props> = (props) => {
   const MDXContent = useMDXComponent(code);
 
   return (
-    <div>
+    <div className="container pt-0">
       <NextSeo
         title={title}
         description={description}

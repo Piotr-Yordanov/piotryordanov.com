@@ -6,20 +6,20 @@ export default function CommandPaletteToggle() {
 
   return (
     <div
-      className="hidden cursor-pointer flex-row p-[4px] text-sm text-gray-400 lg:flex"
+      className="hidden cursor-pointer flex-row text-sm text-gray-400 sm:flex"
       onClick={query.toggle}
     >
       <div className="pointer-events-auto relative bg-white dark:bg-slate-900">
         <button
           type="button"
-          className="dark:highlight-white/5 flex w-full items-center rounded-md py-1.5 pl-2 pr-3 text-sm leading-6 text-slate-400 shadow-sm ring-1 ring-slate-900/10 hover:ring-slate-300 dark:bg-slate-800 dark:hover:bg-slate-700 lg:flex"
+          className="flex w-full items-center rounded-md py-[1px] pl-2 pr-3 text-xs leading-6 text-slate-400 shadow-sm ring-1 ring-slate-900/10 duration-200 ease-in hover:text-primary hover:ring-primary dark:bg-slate-800 dark:hover:bg-slate-700 lg:flex"
         >
           <svg
-            width="24"
-            height="24"
+            width="20"
+            height="20"
             fill="none"
             aria-hidden="true"
-            className="mr-1 flex-none"
+            className="mr-1 mt-[-4px] flex-none"
           >
             <path d="m19 19-3.5-3.5" stroke="currentColor"></path>
             <circle cx="11" cy="11" r="6" stroke="currentColor"></circle>
