@@ -1,4 +1,5 @@
 import { useKBar } from 'kbar';
+import { BsCommand } from 'react-icons/bs';
 
 export default function CommandPaletteToggle() {
   const { query } = useKBar();
@@ -11,7 +12,7 @@ export default function CommandPaletteToggle() {
       <div className="pointer-events-auto relative bg-white dark:bg-slate-900">
         <button
           type="button"
-          className="dark:highlight-white/5 flex w-full items-center rounded-md py-1.5 pl-2 pr-3 text-sm leading-6 text-slate-400 shadow-sm ring-1 ring-slate-900/10 hover:ring-slate-300 lg:flex dark:bg-slate-800 dark:hover:bg-slate-700"
+          className="dark:highlight-white/5 flex w-full items-center rounded-md py-1.5 pl-2 pr-3 text-sm leading-6 text-slate-400 shadow-sm ring-1 ring-slate-900/10 hover:ring-slate-300 dark:bg-slate-800 dark:hover:bg-slate-700 lg:flex"
         >
           <svg
             width="24"
@@ -25,7 +26,8 @@ export default function CommandPaletteToggle() {
           </svg>
           Search...
           <span className="ml-2 flex-none pl-3 text-xs font-semibold">
-            Ctrl K
+            <BsCommand className="inline" />
+            <div className="ml-1 inline ">K</div>
           </span>
         </button>
       </div>

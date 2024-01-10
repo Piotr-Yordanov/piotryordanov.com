@@ -1,3 +1,5 @@
+import SimpleDivider from '@/components/SimpleDivider';
+
 const TVCharts = [
   {
     name: 'MA Breakout',
@@ -39,7 +41,7 @@ const TVCharts = [
 
 const TradingView = () => {
   return (
-    <div className="mx-auto pt-24" id="tradingview">
+    <div className="container" id="tradingview">
       <div className="pb-20 text-center">
         <div className="title font-mono">
           <a href="#tradingview">Trading View Scripts</a>
@@ -73,6 +75,7 @@ const TradingView = () => {
           );
         })}
       </div>
+      <SimpleDivider />
     </div>
   );
 };

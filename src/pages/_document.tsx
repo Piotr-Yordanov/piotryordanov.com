@@ -3,7 +3,7 @@ import Script from 'next/script';
 
 function MyDocument() {
   return (
-    <Html>
+    <Html className="scroll-smooth ">
       <Head />
       <body className="overflow-x-hidden bg-white text-black antialiased transition-colors dark:bg-gray-900 dark:text-white">
         <Main />

@@ -9,7 +9,7 @@ import TVTicker from './tradingview_ticker';
 
 const Trading: NextPage = () => {
   return (
-    <div className="relative py-20">
+    <div className="">
       <Hero />
       <QBT />
       <TradingView />

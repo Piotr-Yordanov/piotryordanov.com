@@ -11,6 +11,7 @@ import { DefaultSeo } from 'next-seo';
 import { ThemeProvider } from 'next-themes';
 import NProgress from 'nprogress';
 import { useEffect } from 'react';
+import ScrollToTop from 'react-scroll-to-top';
 
 import CommandPalette from '@/components/CommandPalette';
 import LayoutWrapper from '@/components/LayoutWrapper';
@@ -19,6 +20,7 @@ import { siteConfigs } from '@/configs/siteConfigs';
 import nextI18nConfig from '../../next-i18next.config';
 
 NProgress.configure({ showSpinner: false });
+import { IoIosArrowUp } from 'react-icons/io';
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
@@ -33,6 +35,10 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <ThemeProvider attribute="class" defaultTheme="light">
+      <ScrollToTop
+        smooth
+        component={<IoIosArrowUp className="ml-2 h-6 w-6" />}
+      />
       <CommandPalette>
         <DefaultSeo
           titleTemplate={`%s | ${siteConfigs.titleShort}`}
