@@ -1,76 +1,128 @@
 import { useTranslation } from 'next-i18next';
-import { useState } from 'react';
 
 import CustomLink from '@/components/CustomLink';
 import { headerConfigs } from '@/configs/headerConfigs';
 
-const MobileNav = () => {
-  const { t } = useTranslation(['common']);
+// const MobileNav = () => {
+//   const { t } = useTranslation(['common']);
+//
+//   const [navShow, setNavShow] = useState(false);
+//
+//   const onToggleNav = () => {
+//     setNavShow((status) => {
+//       if (status) {
+//         document.body.style.overflowY = 'auto';
+//       } else {
+//         // Prevent scrolling
+//         document.body.style.overflowY = 'hidden';
+//       }
+//       return !status;
+//     });
+//   };
+//
+//   return (
+//     <div className="sm:hidden">
+//       <button
+//         type="button"
+//         className="h-10 w-10 rounded p-2 transition-colors hover:bg-gray-100 dark:hover:bg-gray-800 sm:h-12 sm:w-12 sm:p-3"
+//         aria-label="Toggle Menu"
+//         onClick={onToggleNav}
+//       >
+//         <svg
+//           xmlns="http://www.w3.org/2000/svg"
+//           viewBox="0 0 20 20"
+//           fill="currentColor"
+//           className="text-gray-900 transition-colors dark:text-gray-100"
+//         >
+//           {navShow ? (
+//             <path
+//               fillRule="evenodd"
+//               d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+//               clipRule="evenodd"
+//             />
+//           ) : (
+//             <path
+//               fillRule="evenodd"
+//               d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+//               clipRule="evenodd"
+//             />
+//           )}
+//         </svg>
+//       </button>
+//
+//       <div
+//         className={`fixed right-0 top-16 h-screen w-full bg-gray-200/90 transition-all duration-300 ease-in-out dark:bg-gray-800/90 ${
+//           navShow ? 'translate-x-0' : 'translate-x-full'
+//         }`}
+//       >
+//         <nav className="mt-8 h-full w-full">
+//           {headerConfigs.navLinks.map((link) => (
+//             <CustomLink
+//               href={link.href}
+//               key={link.title}
+//               className="block px-12 py-4 text-2xl font-bold tracking-widest text-gray-900 transition-colors hover:bg-gray-300 dark:text-gray-100 dark:hover:bg-gray-700"
+//               onClick={onToggleNav}
+//             >
+//               {t(link.title)}
+//             </CustomLink>
+//           ))}
+//         </nav>
+//       </div>
+//     </div>
+//   );
+// };
+// export default MobileNav;
+import { Menu, Transition } from '@headlessui/react';
+import { Fragment, useEffect, useRef, useState } from 'react';
 
-  const [navShow, setNavShow] = useState(false);
-
-  const onToggleNav = () => {
-    setNavShow((status) => {
-      if (status) {
-        document.body.style.overflowY = 'auto';
-      } else {
-        // Prevent scrolling
-        document.body.style.overflowY = 'hidden';
-      }
-      return !status;
-    });
-  };
-
+function Dropdown() {
   return (
-    <div className="sm:hidden">
-      <button
-        type="button"
-        className="h-10 w-10 rounded p-2 transition-colors hover:bg-gray-100 dark:hover:bg-gray-800 sm:h-12 sm:w-12 sm:p-3"
-        aria-label="Toggle Menu"
-        onClick={onToggleNav}
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 20 20"
-          fill="currentColor"
-          className="text-gray-900 transition-colors dark:text-gray-100"
-        >
-          {navShow ? (
-            <path
-              fillRule="evenodd"
-              d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-              clipRule="evenodd"
-            />
-          ) : (
-            <path
-              fillRule="evenodd"
-              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-              clipRule="evenodd"
-            />
-          )}
-        </svg>
-      </button>
-
-      <div
-        className={`fixed top-16 right-0 h-screen w-full bg-gray-200/90 transition-all duration-300 ease-in-out dark:bg-gray-800/90 ${
-          navShow ? 'translate-x-0' : 'translate-x-full'
-        }`}
-      >
-        <nav className="mt-8 h-full w-full">
-          {headerConfigs.navLinks.map((link) => (
-            <CustomLink
-              href={link.href}
-              key={link.title}
-              className="block px-12 py-4 text-2xl font-bold tracking-widest text-gray-900 transition-colors hover:bg-gray-300 dark:text-gray-100 dark:hover:bg-gray-700"
-              onClick={onToggleNav}
+    <div className="text-right sm:hidden sm:w-56">
+      <Menu as="div" className="relative inline-block text-left">
+        <div>
+          <Menu.Button className="inline-flex w-full justify-center rounded-md px-4 py-2 text-sm font-medium text-white hover:bg-black/30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              className="h-6 w-6 text-gray-900 transition-colors dark:text-gray-100"
             >
-              {t(link.title)}
-            </CustomLink>
-          ))}
-        </nav>
-      </div>
+              <path
+                fillRule="evenodd"
+                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                clipRule="evenodd"
+              />
+            </svg>
+          </Menu.Button>
+        </div>
+        <Transition
+          as={Fragment}
+          enter="transition ease-out duration-100"
+          enterFrom="transform opacity-0 scale-95"
+          enterTo="transform opacity-100 scale-100"
+          leave="transition ease-in duration-75"
+          leaveFrom="transform opacity-100 scale-100"
+          leaveTo="transform opacity-0 scale-95"
+        >
+          <Menu.Items className="w-46 absolute right-0 mt-2 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none">
+            <div className="px-1 py-1 ">
+              {headerConfigs.navLinks.map((link) => (
+                <Menu.Item>
+                  <CustomLink
+                    href={link.href}
+                    key={link.title}
+                    className="block px-12 py-4 font-mono text-xl uppercase text-gray-900 transition-colors hover:bg-gray-300 dark:text-gray-100 dark:hover:bg-gray-700"
+                  >
+                    {link.title}
+                  </CustomLink>
+                </Menu.Item>
+              ))}
+            </div>
+          </Menu.Items>
+        </Transition>
+      </Menu>
     </div>
   );
-};
+}
 
-export default MobileNav;
+export default Dropdown;

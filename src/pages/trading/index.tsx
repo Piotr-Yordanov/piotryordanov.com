@@ -9,7 +9,7 @@ import TVTicker from './tradingview_ticker';
 
 const Trading: NextPage = () => {
   return (
-    <div className="">
+    <div className="relative">
       <Hero />
       <QBT />
       <TradingView />
@@ -17,7 +17,7 @@ const Trading: NextPage = () => {
       <TradingJournal />
       <YoutubeChannel />
 
-      <div className="sticky bottom-[-30px] mx-[-600px]">
+      <div className="sticky bottom-[-30px] sm:mx-[-600px]">
         <TVTicker />
       </div>
     </div>
