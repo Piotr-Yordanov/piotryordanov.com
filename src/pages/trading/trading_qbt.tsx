@@ -11,7 +11,7 @@ import SimpleDivider from '@/components/SimpleDivider';
 
 const QBT = () => {
   return (
-    <div className="background-grid ">
+    <div className="background-grid topborder">
       <div className="container" id="quantbt">
         <div className="py-4">
           <div className="title text-center">QuantBT</div>

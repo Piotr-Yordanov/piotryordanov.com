@@ -41,41 +41,43 @@ const TVCharts = [
 
 const TradingView = () => {
   return (
-    <div className="container" id="tradingview">
-      <div className="pb-20 text-center">
-        <div className="title font-mono">
-          <a href="#tradingview">Trading View Scripts</a>
+    <div className="topborder ">
+      <div className="container" id="tradingview">
+        <div className="pb-20 text-center">
+          <div className="title font-mono">
+            <a href="#tradingview">Trading View Scripts</a>
+          </div>
+          <div className="text">
+            I have published a series of free tradingview scripts that you can
+            access to enhance your trading experience
+          </div>
         </div>
-        <div className="text">
-          I have published a series of free tradingview scripts that you can
-          access to enhance your trading experience
-        </div>
-      </div>
-      <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
-        {TVCharts.map((chart) => {
-          return (
-            <div className="rounded border-2 bg-white p-4" key={chart.id}>
-              <div className="min-h-[100px]">
-                <div className="text-xl">{chart.name}</div>
-                <div className="mb-4 mt-2 text-sm">{chart.description}</div>
+        <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
+          {TVCharts.map((chart) => {
+            return (
+              <div className="rounded border-2 bg-white p-4" key={chart.id}>
+                <div className="min-h-[100px]">
+                  <div className="text-xl">{chart.name}</div>
+                  <div className="mb-4 mt-2 text-sm">{chart.description}</div>
+                </div>
+                <iframe
+                  title="published chart TradingView widget"
+                  lang="en"
+                  id={chart.id}
+                  src={`https://s.tradingview.com/embed/${chart.id}?method=script&amp;utm_source=&amp;utm_medium=widget&amp;utm_campaign=chart`}
+                  style={{
+                    width: '100%',
+                    height: 400,
+                    margin: '0px !important',
+                    padding: '0px !important',
+                  }}
+                ></iframe>
               </div>
-              <iframe
-                title="published chart TradingView widget"
-                lang="en"
-                id={chart.id}
-                src={`https://s.tradingview.com/embed/${chart.id}?method=script&amp;utm_source=&amp;utm_medium=widget&amp;utm_campaign=chart`}
-                style={{
-                  width: '100%',
-                  height: 400,
-                  margin: '0px !important',
-                  padding: '0px !important',
-                }}
-              ></iframe>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
+        <SimpleDivider />
       </div>
-      <SimpleDivider />
     </div>
   );
 };

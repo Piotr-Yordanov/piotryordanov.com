@@ -2,7 +2,7 @@ import SimpleDivider from '@/components/SimpleDivider';
 
 const TradingJournal = () => {
   return (
-    <div className="background-grid ">
+    <div className="background-grid topborder">
       <div className="container" id="journal">
         <div className="title text-center">Trading Journal</div>
         <div className="text mb-20 text-center">
