@@ -1,8 +1,3 @@
-import { useTranslation } from 'next-i18next';
-
-import CustomLink from '@/components/CustomLink';
-import { headerConfigs } from '@/configs/headerConfigs';
-
 // const MobileNav = () => {
 //   const { t } = useTranslation(['common']);
 //
@@ -73,14 +68,18 @@ import { headerConfigs } from '@/configs/headerConfigs';
 // };
 // export default MobileNav;
 import { Menu, Transition } from '@headlessui/react';
+import { useTranslation } from 'next-i18next';
 import { Fragment, useEffect, useRef, useState } from 'react';
+
+import CustomLink from '@/components/CustomLink';
+import { headerConfigs } from '@/configs/headerConfigs';
 
 function Dropdown() {
   return (
     <div className="text-right sm:hidden sm:w-56">
       <Menu as="div" className="relative inline-block text-left">
         <div>
-          <Menu.Button className="inline-flex w-full justify-center rounded-md px-4 py-2 text-sm font-medium text-white hover:bg-black/30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75">
+          <Menu.Button className="mx-0 inline-flex w-full justify-center rounded-md p-0 text-sm font-medium text-white">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
@@ -105,7 +104,7 @@ function Dropdown() {
           leaveTo="transform opacity-0 scale-95"
         >
           <Menu.Items className="w-46 absolute right-0 mt-2 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none">
-            <div className="px-1 py-1 ">
+            <div className="p-1 ">
               {headerConfigs.navLinks.map((link) => (
                 <Menu.Item>
                   <CustomLink
