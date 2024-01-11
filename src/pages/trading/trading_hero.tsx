@@ -42,21 +42,23 @@ const sections = [
 
 const Hero = () => {
   return (
-    <div className="relative mt-4 min-h-[600px] py-32 text-center">
+    <div className="relative mt-4 min-h-[600px] py-16 text-center sm:py-32">
       <div className="title">Quantitative Trading</div>
       <div className="text mx-auto mt-12 max-w-[500px]">
         I have over 10 years of experience shipping high quality code, and
         trading the financial markets.{' '}
       </div>
-      <div className="mx-auto mt-20 flex flex-row justify-center gap-4">
+      <div className="mx-auto mt-20 flex flex-col justify-center gap-4 sm:flex-row">
         {sections.map((section) => (
           <CustomLink
             key={section.name}
-            className={`flex flex-row rounded border-2 ${section.text} ${section.border} ${section.bg} px-2`}
+            className={`mx-auto max-w-40 rounded border-2 ${section.text} ${section.border} ${section.bg} px-2`}
             href={section.link}
           >
-            <div className="mr-2 pt-1">{section.icon}</div>
-            <div className="">{section.name}</div>
+            <div className="flex flex-row">
+              <div className="mr-2 pt-1">{section.icon}</div>
+              <div className="">{section.name}</div>
+            </div>
           </CustomLink>
         ))}
       </div>

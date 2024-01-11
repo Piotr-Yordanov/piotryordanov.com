@@ -1,11 +1,13 @@
 import type { NextPage } from 'next';
 import Image from 'next/image';
+import { HiArrowRight } from 'react-icons/hi2';
 import { LuCandlestickChart } from 'react-icons/lu';
 import { TbAlpha } from 'react-icons/tb';
 
+import ConvertkitSignupForm from '@/components/ConvertkitSignupForm';
 import CustomLink from '@/components/CustomLink';
-import Divider from '@/components/Divider';
 import LayoutPerPage from '@/components/LayoutPerPage';
+import SimpleDivider from '@/components/SimpleDivider';
 
 import Threeways from './home.threeways';
 
@@ -13,8 +15,8 @@ const Home: NextPage = () => {
   return (
     <LayoutPerPage>
       <div className="container">
-        <div className="min-h-[500px] py-24 text-center font-inter">
-          <h1 className="text-3xl tracking-tight text-[#001C46] sm:text-8xl">
+        <div className="mb-20 mt-10 min-h-[150px] py-0 text-center font-inter sm:mt-0 sm:min-h-[300px]">
+          <h1 className="text-5xl tracking-tight text-[#001C46] sm:text-8xl">
             <div className="inline">Cultivate</div>
             <TbAlpha className="inline text-4xl text-primary sm:text-8xl lg:ml-4" />
             in the <br />
@@ -22,7 +24,27 @@ const Home: NextPage = () => {
             <LuCandlestickChart className="ml-4 inline text-3xl text-indigo-500 sm:text-7xl lg:ml-6" />
           </h1>
         </div>
-        <Divider />
+        <div className="mb-20 grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-1">
+          <div className="pr-8 font-inter ">
+            <div className="pb-4 text-2xl font-bold">Want to join us?</div>
+            <div className="text-lg">
+              Join Readers of The Quantrader weekly newsletter for tips,
+              strategies, and resources to make money trading and investing in
+              the financial markets.
+            </div>
+          </div>
+          <div className="pt-8 sm:pt-0">
+            <div className="flex flex-row">
+              <div className="">
+                <HiArrowRight className="hidden h-32 w-32 pr-8 pt-4 text-indigo-500 sm:inline" />
+              </div>
+              <div className="">
+                <div className="mb-4 text-xl font-bold">Start here</div>
+                <ConvertkitSignupForm />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div className="bg-[#001c46]">
         <div className="mx-auto max-w-2xl text-white">

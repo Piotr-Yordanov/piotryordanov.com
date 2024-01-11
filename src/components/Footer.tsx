@@ -7,8 +7,8 @@ import { footerConfigs } from '@/configs/footerConfigs';
 export default function Footer() {
   return (
     <footer>
-      <div className="container mt-16 flex w-full flex-row items-center justify-between p-4">
-        <div className="flex w-1/2 space-x-2 text-sm text-gray-500 transition-colors dark:text-gray-400">
+      <div className="container flex w-full flex-col items-center justify-between p-4 sm:mt-16 sm:flex-row">
+        <div className="hidden space-x-2 text-sm text-gray-500 transition-colors dark:text-gray-400 sm:flex sm:w-1/2">
           <CustomLink
             href="/about"
             className="flex cursor-pointer hover:text-primary"
@@ -19,7 +19,7 @@ export default function Footer() {
             </div>
           </CustomLink>
         </div>
-        <div className="mb-3 flex w-1/2 justify-center space-x-4 text-sm text-gray-500 transition-colors dark:text-gray-400">
+        <div className="my-4 flex justify-center space-x-4 text-sm text-gray-500 transition-colors dark:text-gray-400 sm:mb-3 sm:w-1/2">
           <CustomLink
             href="/about"
             className="flex cursor-pointer hover:text-primary"

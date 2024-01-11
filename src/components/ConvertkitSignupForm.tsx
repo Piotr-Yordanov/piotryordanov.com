@@ -20,7 +20,7 @@ const ConvertKit = () => {
 
         <div className="">
           <input
-            className="small mr-2 rounded-full border-2 border-slate-300 p-2 px-4"
+            className="small mr-2 w-[250px] rounded-full border-2 border-slate-300 p-2 px-4"
             name="email_address"
             aria-label="Email "
             placeholder="Email Address"

@@ -2,8 +2,8 @@ import type { NextPage } from 'next';
 
 const Music: NextPage = () => {
   return (
-    <div className="mx-auto max-w-5xl p-20">
-      <div className="grid grid-cols-2 gap-10">
+    <div className="mx-auto max-w-5xl p-4 sm:p-20">
+      <div className="grid grid-cols-1 gap-10 sm:grid-cols-2">
         <div className="">
           <iframe
             width="100%"

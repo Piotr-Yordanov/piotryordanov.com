@@ -26,12 +26,10 @@
 
 @layer components {
   .title {
-    @apply mb-4 font-mono;
-    font-size: 3rem
+    @apply mb-4 font-mono text-[2rem] sm:text-[3rem];
   }
   .text { 
-    @apply font-mono max-w-[715px] mx-auto;
-    font-size: 1.35rem
+    @apply font-mono max-w-[715px] mx-auto text-[1rem] sm:text-[1.35rem];
   }
 
   .small { 
@@ -39,7 +37,7 @@
   }
 
   .container {
-    @apply mx-auto max-w-full px-4 py-24 sm:px-6 md:max-w-5xl lg:max-w-5xl;
+    @apply mx-auto max-w-full px-8 sm:px-4 py-24 sm:px-6 md:max-w-5xl lg:max-w-5xl;
   }
 
   .background-grid {

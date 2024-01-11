@@ -49,7 +49,9 @@ const Threeways = () => {
                     {way.element || (
                       <a
                         href={way.btnLink}
+                        target="_blank"
                         className="small rounded-full border-2 border-black bg-black px-4 py-2 text-white no-underline hover:bg-gray-800"
+                        rel="noreferrer"
                       >
                         {way.btnText}
                       </a>

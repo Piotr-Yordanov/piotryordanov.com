@@ -19,7 +19,7 @@ const TradingJournal = () => {
             here.
           </a>
         </div>
-        <div className="z-10 mx-auto w-4/5 rounded border-2 p-[1px]">
+        <div className="z-10 mx-auto rounded border-2 p-[1px] sm:w-4/5">
           <iframe
             src="https://scalpson.piotryordanov.com/"
             title="scalpson"

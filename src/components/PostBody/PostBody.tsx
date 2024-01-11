@@ -11,7 +11,7 @@ export default function PostBody({ children }: Props) {
   return (
     <div
       className={clsx(
-        'prose mx-auto max-w-full pr-20 pt-12 font-inter transition-colors dark:prose-dark',
+        'mx-auto max-w-full pt-12 font-inter transition-colors dark:prose-dark sm:prose sm:pr-20',
         styles.postBod
       )}
     >
