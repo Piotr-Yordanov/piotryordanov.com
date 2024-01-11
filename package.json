@@ -17,6 +17,7 @@
     "classnames": "^2.5.1",
     "clsx": "^1.2.1",
     "contentlayer": "^0.3.4",
+    "convertkit-react": "^1.5.5",
     "date-fns": "^2.29.2",
     "esbuild": "^0.18.0",
     "feed": "^4.2.2",

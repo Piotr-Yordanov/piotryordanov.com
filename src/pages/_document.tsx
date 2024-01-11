@@ -12,6 +12,17 @@ function MyDocument() {
           src="https://s3.tradingview.com/tv.js"
           strategy="beforeInteractive"
         />
+
+        <Script
+          src="https://piotryordanov.ck.page/Lv9kV2Ognin8lJ28yb6J-recommendations.js"
+          async={true}
+          strategy="beforeInteractive"
+        />
+        <Script
+          src="https://f.convertkit.com/ckjs/ck.5.js"
+          async={true}
+          strategy="beforeInteractive"
+        />
       </body>
     </Html>
   );
