@@ -7,6 +7,8 @@ import CustomLink from '@/components/CustomLink';
 import Divider from '@/components/Divider';
 import LayoutPerPage from '@/components/LayoutPerPage';
 
+import Threeways from './home.threeways';
+
 const Home: NextPage = () => {
   return (
     <LayoutPerPage>
@@ -68,6 +70,7 @@ const Home: NextPage = () => {
           </div>
         </div>
       </div>
+      <Threeways />
     </LayoutPerPage>
   );
 };
