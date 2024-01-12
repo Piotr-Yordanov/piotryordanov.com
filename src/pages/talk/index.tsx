@@ -17,9 +17,9 @@ function Profile() {
   }, []);
 
   return (
-    <div className="container pt-12">
+    <div className="container pb-0 pt-12">
       <Cal
-        style={{ height: '600px', overflow: 'scroll' }}
+        style={{ height: '600', overflow: 'scroll' }}
         className="w-full "
         calLink={siteConfigs.calendarLink.split('.com/')[1]}
       ></Cal>

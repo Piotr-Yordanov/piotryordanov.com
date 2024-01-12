@@ -29,7 +29,7 @@
     @apply mb-4 font-mono text-[2rem] lg:text-[3rem];
   }
   .text { 
-    @apply font-mono max-w-[715px] mx-auto text-[1rem] lg:text-[1.35rem];
+    @apply font-mono max-w-[715px] mx-auto px-4 text-[1rem] lg:text-[1.35rem];
   }
 
   .small { 
