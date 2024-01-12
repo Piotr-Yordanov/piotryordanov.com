@@ -1,5 +1,4 @@
 import CustomLink from '@/components/CustomLink';
-import { siteConfigs } from '@/configs/siteConfigs';
 
 export default function PostCTA({ children }: Props) {
   return (
@@ -19,7 +18,7 @@ export default function PostCTA({ children }: Props) {
         </li>
         <li>
           <CustomLink
-            href={siteConfigs.calendarLink}
+            href="/talk"
             className="mr-1 text-primary hover:underline"
           >
             Hire me
