@@ -76,7 +76,7 @@ import { headerConfigs } from '@/configs/headerConfigs';
 
 function Dropdown() {
   return (
-    <div className="text-right sm:hidden sm:w-56">
+    <div className="text-right lg:hidden lg:w-56">
       <Menu as="div" className="relative inline-block text-left">
         <div>
           <Menu.Button className="mx-0 inline-flex w-full justify-center rounded-md p-0 text-sm font-medium text-white">
@@ -110,7 +110,7 @@ function Dropdown() {
                   <CustomLink
                     href={link.href}
                     key={link.title}
-                    className="block px-12 py-4 font-mono text-xl uppercase text-gray-900 transition-colors hover:bg-gray-300 dark:text-gray-100 dark:hover:bg-gray-700"
+                    className="block px-4 py-2 font-mono text-sm uppercase text-gray-900 transition-colors hover:bg-gray-300 dark:text-gray-100 dark:hover:bg-gray-700"
                   >
                     {link.title}
                   </CustomLink>

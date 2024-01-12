@@ -55,10 +55,8 @@ const Home: NextPage = (props) => {
   return (
     <LayoutPerPage>
       <div className="container">
-        <div className="prose my-12 space-y-2 transition-colors dark:prose-dark md:prose-lg md:space-y-5">
-          <h1 className="text-center font-mono sm:text-left">Article Topics</h1>
-        </div>
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+        <div className="title mb-8 w-full text-center">Article Topics</div>
+        <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
           {sections.map((section, index) => Section(index))}
         </div>
       </div>

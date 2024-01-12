@@ -1,4 +1,5 @@
 import ConvertkitSignupForm from '@/components/ConvertkitSignupForm';
+import { siteConfigs } from '@/configs/siteConfigs';
 
 const ways = [
   {
@@ -13,7 +14,7 @@ const ways = [
     title: 'Hire my skills',
     description:
       'I can help you deploy state of the art quantitative trading systems.',
-    btnLink: 'https://calendly.com/piotry/hello',
+    btnLink: siteConfigs.calendarLink,
     btnText: 'Hire me',
   },
   {
@@ -28,14 +29,14 @@ const Threeways = () => {
   return (
     <div className="bg-[#dae5e6] font-inter">
       <div className="container ">
-        <div className="flex flex-col sm:relative">
-          <div className="title relative w-full font-inter sm:sticky sm:top-20">
-            <div className="max-w-[350px]">
+        <div className="flex flex-col lg:relative">
+          <div className="title relative w-full font-inter lg:sticky lg:top-20">
+            <div className="lg:max-w-[350px]">
               Three ways I can help
               <span className="ml-4 text-primary">YOU.</span>
             </div>
           </div>
-          <div className="w-full sm:mt-[-150px] sm:flex sm:flex-row">
+          <div className="w-full lg:mt-[-150px] lg:flex lg:flex-row">
             <div className="w-1/2"></div>
             <div className="">
               {ways.map((way, index) => (

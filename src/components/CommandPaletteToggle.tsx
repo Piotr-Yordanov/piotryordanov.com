@@ -6,7 +6,7 @@ export default function CommandPaletteToggle() {
 
   return (
     <div
-      className="hidden cursor-pointer flex-row text-sm text-gray-400 sm:flex"
+      className="hidden cursor-pointer flex-row text-sm text-gray-400 lg:flex"
       onClick={query.toggle}
     >
       <div className="pointer-events-auto relative bg-white dark:bg-slate-900">

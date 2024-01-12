@@ -10,8 +10,8 @@ const Music: NextPage = () => {
         subtitle="My grand mother taught me the piano at the age of 3. I have a perfect pitch. Combined with over a decade of practice and theory classes, it makes me fluent on the keyboard. There is a certain pleasure that comes from just playing."
       ></Hero>
       <div className="background-grid topborder">
-        <div className="mx-auto max-w-5xl p-4 pt-0 sm:p-10">
-          <div className="grid grid-cols-1 gap-10 sm:grid-cols-2">
+        <div className="mx-auto max-w-5xl p-4 pt-0 lg:p-10">
+          <div className="grid grid-cols-1 gap-10 lg:grid-cols-2">
             <div className="">
               <iframe
                 width="100%"

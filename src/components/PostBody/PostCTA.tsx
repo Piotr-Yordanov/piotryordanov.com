@@ -1,4 +1,5 @@
 import CustomLink from '@/components/CustomLink';
+import { siteConfigs } from '@/configs/siteConfigs';
 
 export default function PostCTA({ children }: Props) {
   return (
@@ -18,7 +19,7 @@ export default function PostCTA({ children }: Props) {
         </li>
         <li>
           <CustomLink
-            href="https://calendly.com/piotry/hello"
+            href={siteConfigs.calendarLink}
             className="mr-1 text-primary hover:underline"
           >
             Hire me

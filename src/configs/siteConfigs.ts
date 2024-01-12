@@ -16,4 +16,5 @@ export const siteConfigs = {
   bannerUrl: fqdn + bannerPath,
   twitterID: '@piotr_yordanov',
   datePublished: '2022-09-01',
+  calendarLink: 'https://cal.com/piotry/30min',
 };

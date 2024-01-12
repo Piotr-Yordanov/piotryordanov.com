@@ -25,8 +25,8 @@ export default function Header({ type }) {
             </CustomLink>
           </div>
 
-          <div className="flex items-center leading-5 sm:gap-1">
-            <div className="hidden items-center pb-1 text-sm leading-5 sm:flex sm:gap-1">
+          <div className="flex items-center leading-5 lg:gap-1">
+            <div className="hidden items-center pb-1 text-sm leading-5 lg:flex lg:gap-1">
               {headerConfigs.navLinks.map((link) => (
                 <CustomLink
                   href={link.href}
