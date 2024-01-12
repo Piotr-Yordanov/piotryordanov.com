@@ -7,7 +7,6 @@ import { TbAlpha } from 'react-icons/tb';
 import ConvertkitSignupForm from '@/components/ConvertkitSignupForm';
 import CustomLink from '@/components/CustomLink';
 import LayoutPerPage from '@/components/LayoutPerPage';
-import SimpleDivider from '@/components/SimpleDivider';
 
 import Threeways from './home.threeways';
 

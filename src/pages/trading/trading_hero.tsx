@@ -3,8 +3,7 @@ import { SiJupyter } from 'react-icons/si';
 import { SlNotebook, SlSocialYoutube } from 'react-icons/sl';
 
 import CustomLink from '@/components/CustomLink';
-import Dots from '@/components/Dots/Dots';
-import SimpleDivider from '@/components/SimpleDivider';
+import Hero from '@/components/Hero';
 
 const sections = [
   {
@@ -40,15 +39,13 @@ const sections = [
   },
 ];
 
-const Hero = () => {
+const TradingHero = () => {
   return (
-    <div className="relative mt-4 min-h-[600px] py-16 text-center sm:py-32">
-      <div className="title">Quantitative Trading</div>
-      <div className="text mx-auto mt-12 max-w-[500px]">
-        I have over 10 years of experience shipping high quality code, and
-        trading the financial markets.{' '}
-      </div>
-      <div className="mx-auto mt-20 flex flex-col justify-center gap-4 sm:flex-row">
+    <Hero
+      title="Quantitative Trading"
+      subtitle="I have over 10 years of experience shipping high quality code, and trading the financial markets."
+    >
+      <div className="mx-auto mt-20 flex flex-col justify-center gap-4 sm:max-w-[600px] sm:flex-row">
         {sections.map((section) => (
           <CustomLink
             key={section.name}
@@ -62,10 +59,8 @@ const Hero = () => {
           </CustomLink>
         ))}
       </div>
-      <Dots direction="right" />
-      <SimpleDivider />
-    </div>
+    </Hero>
   );
 };
 
-export default Hero;
+export default TradingHero;
