@@ -49,7 +49,7 @@ const TradingHero = () => {
         {sections.map((section) => (
           <CustomLink
             key={section.name}
-            className={`mx-auto max-w-40 rounded border-2 ${section.text} ${section.border} ${section.bg} px-2`}
+            className={`mx-auto max-w-44 rounded border-2 ${section.text} ${section.border} ${section.bg} px-2`}
             href={section.link}
           >
             <div className="flex flex-row">
