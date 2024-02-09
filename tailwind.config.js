@@ -17,6 +17,7 @@ module.exports = {
         inter: ['var(--font-inter)'],
         mono: ['var(--font-roboto-mono)'],
         lato: ['var(--font-lato)'],
+        sacramento: ['var(--font-sacramento)'],
         literata: ['var(--font-literata)'],
       },
       colors: {
