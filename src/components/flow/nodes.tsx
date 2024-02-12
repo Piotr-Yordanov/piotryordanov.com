@@ -34,7 +34,9 @@ const PortfolioNode = ({ id, data }) => {
               <div className="w-[300px] p-4 text-gray-300">
                 <div className="w-full border-b-[1px] border-zinc-600 pb-2">
                   <div className="">{section.text}</div>
-                  <div className="text-xs text-gray-500">{section.link}</div>
+                  <div className="overflow-hidden text-ellipsis text-xs text-gray-500">
+                    {section.link}
+                  </div>
                 </div>
                 <div className="mt-2">{section.description}</div>
               </div>
@@ -92,7 +94,7 @@ const border = {
   writer: 'border-indigo-500',
   pianist: 'border-green-500',
 };
-const text = {
+export const text = {
   engineer: 'text-red-500',
   quant: 'text-amber-500',
   writer: 'text-indigo-500',

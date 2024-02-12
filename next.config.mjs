@@ -30,6 +30,7 @@ const nextConfig = withContentlayer({
   images: {
     // Enable modern image formats
     formats: ['image/avif', 'image/webp'],
+    domains: ['localhost', 'collective2.com'],
   },
   i18n,
 });

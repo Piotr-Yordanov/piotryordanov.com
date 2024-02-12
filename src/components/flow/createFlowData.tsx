@@ -85,12 +85,14 @@ const quantPortfolio = [
   {
     link: 'https://www.piotryordanov.com/trading#tradingview',
     text: 'TradingView Scripts',
+    img: '/site-samples/tv.png',
     description: 'TV scripts you can use to for yourself',
     targetHandle: 'top',
     handles: [{ type: 'target', position: 'bottom' }],
   },
   {
     link: 'https://collective2.com/details/145905281',
+    img: 'http://collective2.com/performance/145905281',
     text: 'Trading Bot',
     description: 'A live trading bot that you can copy!',
     targetHandle: 'top',
@@ -99,6 +101,7 @@ const quantPortfolio = [
   {
     link: 'https://quantbt.com/',
     text: 'Quantbt',
+    img: '/site-samples/qbt.png',
     description: 'A Hyperperformant backtester',
     targetHandle: 'top',
     handles: [{ type: 'target', position: 'bottom' }],
@@ -106,6 +109,7 @@ const quantPortfolio = [
   {
     link: 'https://scalpson.piotryordanov.com/',
     text: 'Scalpson',
+    img: '/site-samples/scalpson.png',
     description: 'A trading journal',
     targetHandle: 'top',
     handles: [{ type: 'target', position: 'bottom' }],
@@ -113,6 +117,7 @@ const quantPortfolio = [
   {
     link: 'https://www.piotryordanov.com/trading#youtube',
     text: 'Live Trading',
+    img: '/site-samples/yt.png',
     description: 'Videos of me trading live!',
     targetHandle: 'top',
     handles: [{ type: 'target', position: 'bottom' }],
@@ -249,7 +254,7 @@ const createNodes = () => {
       type: 'portfolioNode',
       data: { section: section, handles: section.handles },
       draggable: true,
-      position: { x: -850, y: -450 + 400 * index },
+      position: { x: -950, y: -450 + 400 * index },
     };
     runningIndex++;
     return newItem;
@@ -262,7 +267,7 @@ const createNodes = () => {
       type: 'portfolioNode',
       data: { section: section, handles: section.handles },
       draggable: true,
-      position: { x: -350 + 450 * index, y: -650 },
+      position: { x: -500 + 450 * index, y: -650 },
     };
     runningIndex++;
     return newItem;
@@ -294,7 +299,8 @@ const createNodes = () => {
     return newItem;
   });
 
-  return [...mainNodes, ...portfolio, ...quant, ...pianist, ...writing];
+  // return [...mainNodes, ...portfolio, ...quant, ...pianist, ...writing];
+  return [...mainNodes, ...portfolio, ...quant, ...pianist];
 };
 
 const createEdges = () => {
