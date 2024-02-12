@@ -72,6 +72,7 @@ import { useTranslation } from 'next-i18next';
 import { Fragment, useEffect, useRef, useState } from 'react';
 
 import CustomLink from '@/components/CustomLink';
+
 import { headerConfigs } from '@/configs/headerConfigs';
 
 function Dropdown() {
@@ -84,7 +85,7 @@ function Dropdown() {
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
               fill="currentColor"
-              className="h-6 w-6 text-gray-900 transition-colors dark:text-gray-100"
+              className="size-6 text-gray-900 transition-colors dark:text-gray-100"
             >
               <path
                 fillRule="evenodd"
@@ -106,7 +107,7 @@ function Dropdown() {
           <Menu.Items className="w-46 absolute right-0 mt-2 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none">
             <div className="p-1 ">
               {headerConfigs.navLinks.map((link) => (
-                <Menu.Item>
+                <Menu.Item key={link.title}>
                   <CustomLink
                     href={link.href}
                     key={link.title}

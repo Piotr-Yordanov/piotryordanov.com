@@ -33,7 +33,7 @@ dependencies:
     specifier: ^1.5.5
     version: 1.5.5
   date-fns:
-    specifier: ^2.29.2
+    specifier: ^2.30.0
     version: 2.30.0
   esbuild:
     specifier: ^0.18.0

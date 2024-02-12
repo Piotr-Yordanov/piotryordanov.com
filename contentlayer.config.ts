@@ -1,9 +1,9 @@
+import { defineDocumentType, makeSource } from 'contentlayer/source-files';
 import rehypeCodeTitles from 'rehype-code-titles';
 import rehypePrism from 'rehype-prism-plus';
 import rehypeSlug from 'rehype-slug';
 
 import { DEFAULT_LOCALE, LOCALES } from './src/configs/i18nConfigs';
-import { defineDocumentType, makeSource } from 'contentlayer/source-files';
 import imageMetadata from './src/plugins/imageMetadata';
 
 export const Post = defineDocumentType(() => ({

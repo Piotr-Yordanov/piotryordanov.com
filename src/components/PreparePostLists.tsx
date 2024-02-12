@@ -1,13 +1,14 @@
 import { GetStaticProps } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
+import { allPostsNewToOld } from '@/lib/contentLayerAdapter';
+import generateRSS from '@/lib/generateRSS';
+
 import {
   getCommandPalettePosts,
   PostForCommandPalette,
 } from '@/components/CommandPalette/getCommandPalettePosts';
 import { PostForPostList } from '@/components/PostList';
-import { allPostsNewToOld } from '@/lib/contentLayerAdapter';
-import generateRSS from '@/lib/generateRSS';
 
 type PostForIndexPage = PostForPostList;
 

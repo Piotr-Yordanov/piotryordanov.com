@@ -1,7 +1,8 @@
 import { useRouter } from 'next/router';
 
-import CustomLink from '@/components/CustomLink';
 import formatDate from '@/lib/formatDate';
+
+import CustomLink from '@/components/CustomLink';
 
 export interface PostForPostList {
   slug: string;
@@ -27,16 +28,16 @@ export default function PostList({ posts = [] }: Props) {
         return (
           <li key={index} className="group transition-colors">
             <CustomLink href={path}>
-              <article className="space-y-2 rounded-xl p-4 transition-colors group-hover:bg-gray-100 xl:grid xl:grid-cols-4 xl:items-baseline  xl:space-y-0 dark:group-hover:bg-gray-800">
+              <article className="space-y-2 rounded-xl p-4 transition-colors group-hover:bg-gray-100 dark:group-hover:bg-gray-800 xl:grid xl:grid-cols-4  xl:items-baseline xl:space-y-0">
                 <dl>
                   <dt className="sr-only">Published on</dt>
-                  <dd className="text-sm font-medium leading-6 text-gray-500 transition-colors md:text-base dark:text-gray-400">
+                  <dd className="text-sm font-medium leading-6 text-gray-500 transition-colors dark:text-gray-400 md:text-base">
                     <time dateTime={date}>{formatDate(date, locale)}</time>
                   </dd>
                 </dl>
                 <div className="space-y-3 xl:col-span-3">
                   <div>
-                    <h3 className="text-lg font-bold tracking-tight text-gray-900 transition-colors sm:text-xl md:text-2xl dark:text-gray-100">
+                    <h3 className="text-lg font-bold tracking-tight text-gray-900 transition-colors dark:text-gray-100 sm:text-xl md:text-2xl">
                       {title}
                     </h3>
                   </div>

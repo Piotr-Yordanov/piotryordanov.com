@@ -1,21 +1,25 @@
 'use client';
-import React, { useCallback, useState, useEffect } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import ReactFlow, {
-  ReactFlowProvider,
   Background,
-  useNodesState,
-  useEdgesState,
   getViewportForBounds,
+  ReactFlowProvider,
+  useEdgesState,
+  useNodesState,
   useReactFlow,
+  Controls,
 } from 'reactflow';
-import { createNodes, createEdges } from '@/components/flow/createFlowData';
-import { PPNode, SectionNode, PortfolioNode } from '@/components/flow/nodes';
+import { utilServerSideDeviceDetection } from '@/lib/utilServerSideDeviceDetection';
+
+import { createEdges, createNodes } from '@/components/flow/createFlowData';
+import { PortfolioNode, PPNode, SectionNode } from '@/components/flow/nodes';
 
 const initialNodes = createNodes();
 const initialEdges = createEdges();
 
 function App() {
   const [rfInstance, setInstance] = useState();
+  const [isMobile, setIsMobile] = useState();
   const { setViewport, zoomIn, zoomOut } = useReactFlow();
   const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
   const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
@@ -23,13 +27,20 @@ function App() {
 
   useEffect(() => {
     if (rfInstance) {
+      const isMobile = window.innerWidth < 768;
       rfInstance.setCenter(
         initialNodes[0].position.x,
         initialNodes[0].position.y,
-        { zoom: 1, duration: 500 }
+        { zoom: isMobile ? 0.5 : 1, duration: 500 }
       );
     }
   }, [rfInstance]);
+
+  useEffect(() => {
+    if (isMobile === undefined) {
+      setIsMobile(window.innerWidth < 768);
+    }
+  }, [isMobile]);
 
   return (
     <div className="h-screen w-screen bg-[#202124]">
@@ -37,17 +48,14 @@ function App() {
         onInit={setInstance}
         defaultNodes={nodes}
         defaultEdges={edges}
-        defaultViewport={{
-          x: initialNodes[0].position.x,
-          y: initialNodes[0].position.y,
-          zoom: 1,
-        }}
         nodeTypes={{
           sectionNode: SectionNode,
           ppNode: PPNode,
           portfolioNode: PortfolioNode,
         }}
         proOptions={proOptions}
+        maxZoom={isMobile ? 0.8 : 1}
+        minZoom={isMobile ? 0.1 : 0.2}
       >
         <Background />
       </ReactFlow>

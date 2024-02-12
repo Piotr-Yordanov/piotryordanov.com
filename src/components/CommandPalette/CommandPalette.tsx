@@ -49,7 +49,7 @@ export default function CommandPalette({ children }: Props) {
       name: t('Articles'),
       keywords:
         'search find posts writing words blog articles thoughts 搜尋 尋找 文章 寫作 部落格',
-      icon: <MagnifyingGlassIcon className="h-6 w-6" />,
+      icon: <MagnifyingGlassIcon className="size-6" />,
       section: {
         name: t('search'),
         priority: Priority.HIGH,
@@ -60,7 +60,7 @@ export default function CommandPalette({ children }: Props) {
       name: t('home'),
       keywords: 'home homepage index 首頁',
       perform: () => router.push('/'),
-      icon: <HomeIcon className="h-6 w-6" />,
+      icon: <HomeIcon className="size-6" />,
       section: {
         name: t('page'),
         priority: Priority.NORMAL,
@@ -71,7 +71,7 @@ export default function CommandPalette({ children }: Props) {
       name: t('Trading'),
       keywords: 'trading',
       perform: () => router.push('/trading'),
-      icon: <LuCandlestickChart className="h-6 w-6" />,
+      icon: <LuCandlestickChart className="size-6" />,
       section: t('page'),
     },
     {
@@ -79,7 +79,7 @@ export default function CommandPalette({ children }: Props) {
       name: t('Articles'),
       keywords: 'articles',
       perform: () => router.push('/articles'),
-      icon: <NewspaperIcon className="h-6 w-6" />,
+      icon: <NewspaperIcon className="size-6" />,
       section: t('page'),
     },
     {
@@ -87,7 +87,7 @@ export default function CommandPalette({ children }: Props) {
       name: t('Music'),
       keywords: 'music',
       perform: () => router.push('/music'),
-      icon: <GiGrandPiano className="h-6 w-6" />,
+      icon: <GiGrandPiano className="size-6" />,
       section: t('page'),
     },
     // Operation section
@@ -150,8 +150,8 @@ function CommandBar() {
   return (
     <KBarPortal>
       <KBarPositioner className="z-20 flex items-center bg-gray-400/70 p-2 backdrop-blur-sm dark:bg-gray-900/80">
-        <KBarAnimator className="bg-white/80 box-content w-full max-w-[600px] overflow-hidden rounded-xl border border-gray-400 p-2 dark:border-gray-600 dark:bg-gray-700/80">
-          <KBarSearch className="bg-transparent flex h-16 w-full px-4 outline-none" />
+        <KBarAnimator className="box-content w-full max-w-[600px] overflow-hidden rounded-xl border border-gray-400 bg-white/80 p-2 dark:border-gray-600 dark:bg-gray-700/80">
+          <KBarSearch className="flex h-16 w-full bg-transparent px-4 outline-none" />
           <RenderResults />
         </KBarAnimator>
       </KBarPositioner>

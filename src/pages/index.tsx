@@ -37,7 +37,7 @@ const Home: NextPage = () => {
             <div className="pt-8 lg:pt-0">
               <div className="flex flex-row">
                 <div className="">
-                  <HiArrowRight className="hidden h-32 w-32 pr-8 pt-4 text-indigo-500 lg:inline" />
+                  <HiArrowRight className="hidden size-32 pr-8 pt-4 text-indigo-500 lg:inline" />
                 </div>
                 <div className="">
                   <div className="mb-4 text-xl font-bold">Start here</div>

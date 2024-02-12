@@ -1,9 +1,10 @@
 import { Feed } from 'feed';
 import { writeFileSync } from 'fs';
 
-import { siteConfigs } from '@/configs/siteConfigs';
 import { allPostsNewToOld } from '@/lib/contentLayerAdapter';
 import { getPostOGImage } from '@/lib/getPostOGImage';
+
+import { siteConfigs } from '@/configs/siteConfigs';
 
 export default function generateRSS() {
   const author = {

@@ -1,9 +1,3 @@
-import '@/styles/globals.css';
-import '@/styles/prism-dracula.css';
-import '@/styles/prism-plus.css';
-import 'nprogress/nprogress.css';
-import '@/styles/nprogress-custom.scss';
-
 import type { AppProps } from 'next/app';
 import { useRouter } from 'next/router';
 import { appWithTranslation } from 'next-i18next';
@@ -13,16 +7,21 @@ import NProgress from 'nprogress';
 import { useEffect } from 'react';
 import ScrollToTop from 'react-scroll-to-top';
 
+import '@/styles/globals.css';
+import '@/styles/prism-dracula.css';
+import '@/styles/prism-plus.css';
+import 'nprogress/nprogress.css';
+import '@/styles/nprogress-custom.scss';
+import 'reactflow/dist/style.css';
+
 import CommandPalette from '@/components/CommandPalette';
 import LayoutWrapper from '@/components/LayoutWrapper';
+
 import { siteConfigs } from '@/configs/siteConfigs';
-import 'reactflow/dist/style.css';
 
 import nextI18nConfig from '../../next-i18next.config';
 
 NProgress.configure({ showSpinner: false });
-import { IoIosArrowUp } from 'react-icons/io';
-
 import {
   Inter,
   Lato,
@@ -30,6 +29,7 @@ import {
   Roboto_Mono,
   Sacramento,
 } from '@next/font/google';
+import { IoIosArrowUp } from 'react-icons/io';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -78,7 +78,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <ThemeProvider attribute="class" defaultTheme="light">
         <ScrollToTop
           smooth
-          component={<IoIosArrowUp className="ml-2 h-6 w-6" />}
+          component={<IoIosArrowUp className="ml-2 size-6" />}
         />
         <CommandPalette>
           <DefaultSeo

@@ -4,7 +4,7 @@ export const SectionCardIcon = ({ bg, text, d, icon }) => {
   return (
     <div
       className={classnames(
-        'mb-5 inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-full',
+        'mb-5 inline-flex size-12 shrink-0 items-center justify-center rounded-full',
         bg,
         text
       )}

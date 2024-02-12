@@ -2,6 +2,7 @@ import { FaArrowCircleRight } from 'react-icons/fa';
 
 import CustomLink from '@/components/CustomLink';
 import SocialIcon from '@/components/SocialIcon';
+
 import { footerConfigs } from '@/configs/footerConfigs';
 
 export default function Footer() {

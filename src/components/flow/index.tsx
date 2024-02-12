@@ -1,6 +1,6 @@
 import Engineer from './Engineer';
+import Pianist from './Pianist';
 import Quant from './Quant';
 import Writer from './Writer';
-import Pianist from './Pianist';
 
-export { Engineer, Quant, Writer, Pianist };
+export { Engineer, Pianist, Quant, Writer };

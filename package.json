@@ -20,7 +20,7 @@
     "clsx": "^1.2.1",
     "contentlayer": "^0.3.4",
     "convertkit-react": "^1.5.5",
-    "date-fns": "^2.29.2",
+    "date-fns": "^2.30.0",
     "esbuild": "^0.18.0",
     "feed": "^4.2.2",
     "github-slugger": "^1.4.0",

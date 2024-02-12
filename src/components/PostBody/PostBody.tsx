@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 
 import styles from './PostBody.module.scss';
+
 import PostCTA from './PostCTA';
 
 type Props = {

@@ -1,12 +1,13 @@
 import type { NextPage } from 'next';
 
+import LayoutWrapper from '@/components/LayoutWrapper';
+
 import Hero from './trading_hero';
 import TradingJournal from './trading_journal';
 import QBT from './trading_qbt';
 import YoutubeChannel from './trading_youtube';
 import TradingView from './tradingview';
 import TVTicker from './tradingview_ticker';
-import LayoutWrapper from '@/components/LayoutWrapper';
 
 const Trading: NextPage = () => {
   return (

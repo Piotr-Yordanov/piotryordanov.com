@@ -1,4 +1,5 @@
 import { Handle, Position } from 'reactflow';
+
 function getHandlePosition(handlePosition: string) {
   switch (handlePosition) {
     case 'right':
@@ -15,18 +16,17 @@ function getHandlePosition(handlePosition: string) {
 }
 
 // -----------------------------------------------------------
+import Image from 'next/image';
 import { FaYoutube } from 'react-icons/fa6';
 import { RiSoundcloudLine } from 'react-icons/ri';
-import Image from 'next/image';
-
 // import gg from '/site-samples/gg.png';
-
 import ReactPlayer from 'react-player';
+
 const PortfolioNode = ({ id, data }) => {
   const section = data.section;
   return (
     <BaseNode data={data}>
-      <a href={section.link} target="_blank">
+      <a href={section.link} target="_blank" rel="noreferrer">
         <div className="scale-100 cursor-pointer rounded bg-zinc-800 shadow-2 transition-all ease-in hover:scale-105">
           {section.type !== 'player' && (
             <div className="">
@@ -83,7 +83,7 @@ const BaseNode = (props) => {
 const PPNode = ({ id, data }) => {
   return (
     <BaseNode data={data}>
-      <div className="h-40 w-40 rounded-full bg-[url('/profile-pic.png')] bg-cover bg-center shadow-2"></div>
+      <div className="size-40 rounded-full bg-[url('/profile-pic.png')] bg-cover bg-center shadow-2"></div>
     </BaseNode>
   );
 };
@@ -127,4 +127,4 @@ const SectionNode = ({ id, data }) => {
   );
 };
 
-export { PPNode, SectionNode, PortfolioNode };
+export { PortfolioNode, PPNode, SectionNode };

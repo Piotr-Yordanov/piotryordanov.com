@@ -35,7 +35,7 @@ const QBT = () => {
             <SectionCardIcon
               bg="bg-gray-200"
               text="text-red-500"
-              icon={<FaDocker className="h-10 w-10 p-2" />}
+              icon={<FaDocker className="size-10 p-2" />}
             />
             <SectionCardContent
               title="Live Trading"
@@ -46,7 +46,7 @@ const QBT = () => {
             <SectionCardIcon
               bg="bg-green-100"
               text="text-green-500"
-              icon={<GiToolbox className="h-10 w-10 p-2" />}
+              icon={<GiToolbox className="size-10 p-2" />}
             />
             <SectionCardContent
               title="Powerful Methods"
@@ -57,7 +57,7 @@ const QBT = () => {
             <SectionCardIcon
               bg="bg-indigo-100"
               text="text-indigo-500"
-              icon={<BsGraphUp className="h-10 w-10 p-2" />}
+              icon={<BsGraphUp className="size-10 p-2" />}
             />
             <SectionCardContent
               title="Robust Charting"

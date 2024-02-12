@@ -9,7 +9,6 @@ const Divider = () => {
           viewBox="0 0 24 24"
           stroke="#4c4c4c"
           width="24"
-          heigh="24"
         >
           <path
             strokeLinecap="round"

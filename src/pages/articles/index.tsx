@@ -3,12 +3,13 @@ import { FaCode } from 'react-icons/fa';
 import { GiMeditation } from 'react-icons/gi';
 import { LuCandlestickChart } from 'react-icons/lu';
 
+import posts from '@/lib/contentLayerAdapter';
+
 import CustomLink from '@/components/CustomLink';
 import LayoutPerPage from '@/components/LayoutPerPage';
 import LayoutWrapper from '@/components/LayoutWrapper';
 // ==================================================== //
 import PostList, { PostForPostList } from '@/components/PostList';
-import posts from '@/lib/contentLayerAdapter';
 
 const Section = (index: number) => {
   const section = sections[index];
@@ -42,14 +43,14 @@ const sections = [
   {
     tag: 'quant',
     name: 'Quantitative Finance',
-    icon: <LuCandlestickChart className="h-7 w-7" />,
+    icon: <LuCandlestickChart className="size-7" />,
   },
   {
     tag: 'mindfulness',
     name: 'Mindfulness',
-    icon: <GiMeditation className="h-7 w-7" />,
+    icon: <GiMeditation className="size-7" />,
   },
-  { tag: 'coding', name: 'Coding', icon: <FaCode className="h-7 w-7" /> },
+  { tag: 'coding', name: 'Coding', icon: <FaCode className="size-7" /> },
 ];
 
 const Home: NextPage = (props) => {

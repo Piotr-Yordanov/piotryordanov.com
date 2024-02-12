@@ -1,4 +1,5 @@
 import ConvertkitSignupForm from '@/components/ConvertkitSignupForm';
+
 import { siteConfigs } from '@/configs/siteConfigs';
 
 const ways = [

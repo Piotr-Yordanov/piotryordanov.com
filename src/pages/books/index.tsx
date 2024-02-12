@@ -28,8 +28,8 @@ const Books: NextPage = () => {
             <div className="grid grid-cols-1 gap-10 sm:grid-cols-2">
               <Image
                 layout="responsive"
-                src={'/tinderland.jpg'}
-                alt={'tinderland'}
+                src="/tinderland.jpg"
+                alt="tinderland"
                 height={100}
                 width={100}
                 className="scale-90 p-4 duration-150 ease-in hover:scale-100"

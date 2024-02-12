@@ -4,6 +4,12 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { ArticleJsonLd, NextSeo } from 'next-seo';
 import { ParsedUrlQuery } from 'querystring';
 
+import { allPosts, allPostsNewToOld } from '@/lib/contentLayerAdapter';
+import { allRedirects } from '@/lib/getAllRedirects';
+import { getPostOGImage } from '@/lib/getPostOGImage';
+import mdxComponents from '@/lib/mdxComponents';
+import { unifyPath } from '@/lib/unifyPath';
+
 import {
   getCommandPalettePosts,
   PostForCommandPalette,
@@ -13,13 +19,9 @@ import PostLayout, {
   PostForPostLayout,
   RelatedPostForPostLayout,
 } from '@/components/PostLayout';
+
 import { LOCALES } from '@/configs/i18nConfigs';
 import { siteConfigs } from '@/configs/siteConfigs';
-import { allPosts, allPostsNewToOld } from '@/lib/contentLayerAdapter';
-import { allRedirects } from '@/lib/getAllRedirects';
-import { getPostOGImage } from '@/lib/getPostOGImage';
-import mdxComponents from '@/lib/mdxComponents';
-import { unifyPath } from '@/lib/unifyPath';
 
 type PostForPostPage = PostForPostLayout & {
   title: string;

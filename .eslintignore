@@ -52,3 +52,5 @@ next-env.d.ts
 
 # Ignore contentlayer eslint errors
 contentLayerAdapter.js
+
+tailwind.config.js

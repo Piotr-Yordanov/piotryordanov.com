@@ -1,35 +1,77 @@
 module.exports = {
+  env: {
+    browser: true,
+    es2021: true,
+    node: true,
+  },
+  plugins: ['@typescript-eslint', 'simple-import-sort'],
   extends: [
-    'eason',
+    'eslint:recommended',
+    'next',
     'next/core-web-vitals',
-    'plugin:tailwindcss/recommended',
-    'plugin:prettier/recommended', // Make this the last element so prettier config overrides other formatting rules
+    'plugin:@typescript-eslint/recommended',
+    'prettier',
   ],
-  plugins: ['tailwindcss'],
   rules: {
-    'tailwindcss/classnames-order': 'off', // Respect prettier-plugin-tailwindcss order
-  },
-  settings: {
-    // Support absolute imports
-    // https://www.npmjs.com/package/eslint-import-resolver-alias
-    'import/resolver': {
-      alias: {
-        map: [['@', './src']],
-        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+    '@typescript-eslint/no-explicit-any': 'off',
+    'no-unused-vars': 'off',
+    'no-console': 'warn',
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
+    '@typescript-eslint/ban-ts-comment': 'off',
+    'react/no-unescaped-entities': 'off',
+    'no-case-declarations': 'off',
+
+    'react/display-name': 'off',
+    'react/jsx-curly-brace-presence': [
+      'warn',
+      { props: 'never', children: 'never' },
+    ],
+
+    //#region  //*=========== Unused Import ===========
+    '@typescript-eslint/no-unused-vars': 'off',
+    //#endregion  //*======== Unused Import ===========
+
+    //#region  //*=========== Import Sort ===========
+    'simple-import-sort/exports': 'warn',
+    'simple-import-sort/imports': [
+      'warn',
+      {
+        groups: [
+          // ext library & side effect imports
+          ['^@?\\w', '^\\u0000'],
+          // {s}css files
+          ['^.+\\.s?css$'],
+          // Lib and hooks
+          ['^@/lib', '^@/hooks'],
+          // static data
+          ['^@/data'],
+          // components
+          ['^@/components', '^@/container'],
+          // zustand store
+          ['^@/store'],
+          // Other imports
+          ['^@/'],
+          // relative paths up until 3 level
+          [
+            '^\\./?$',
+            '^\\.(?!/?$)',
+            '^\\.\\./?$',
+            '^\\.\\.(?!/?$)',
+            '^\\.\\./\\.\\./?$',
+            '^\\.\\./\\.\\.(?!/?$)',
+            '^\\.\\./\\.\\./\\.\\./?$',
+            '^\\.\\./\\.\\./\\.\\.(?!/?$)',
+          ],
+          ['^@/types'],
+          // other that didnt fit in
+          ['^'],
+        ],
       },
-    },
-    'import/ignore': ['contentLayerAdapter.js'],
+    ],
+    //#endregion  //*======== Import Sort ===========
   },
-  overrides: [
-    {
-      files: '**/*.{ts,tsx}',
-      extends: [
-        'eason/typescript',
-        'plugin:prettier/recommended', // Make this the last element so prettier config overrides other formatting rules
-      ],
-      rules: {
-        '@typescript-eslint/no-non-null-assertion': 'off',
-      },
-    },
-  ],
+  globals: {
+    React: true,
+    JSX: true,
+  },
 };

@@ -5,6 +5,7 @@ import CustomLink from '@/components/CustomLink';
 import MobileNav from '@/components/MobileNav';
 import SectionContainer from '@/components/SectionContainer';
 import ThemeSwitch from '@/components/ThemeSwitch';
+
 import { headerConfigs } from '@/configs/headerConfigs';
 
 export default function Header({ type }) {

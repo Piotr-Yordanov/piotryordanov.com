@@ -35,7 +35,7 @@ function CustomPre({ children, className, ...props }: Props) {
         ref={preRef}
         className={clsx(className, 'focus:outline-none')}
       >
-        <div className="absolute top-0 right-0 m-2 flex items-center rounded-md bg-[#282a36] dark:bg-[#262626]">
+        <div className="absolute right-0 top-0 m-2 flex items-center rounded-md bg-[#282a36] dark:bg-[#262626]">
           <span
             className={clsx('hidden px-2 text-xs text-green-400 ease-in', {
               'group-hover:flex': copied,
@@ -60,7 +60,7 @@ function CustomPre({ children, className, ...props }: Props) {
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className={clsx('pointer-events-none h-4 w-4', {
+              className={clsx('pointer-events-none size-4', {
                 'text-gray-400 dark:text-gray-400': !copied,
                 'text-green-400': copied,
               })}

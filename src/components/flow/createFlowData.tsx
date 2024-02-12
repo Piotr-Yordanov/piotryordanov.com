@@ -1,7 +1,6 @@
 import { FaCode } from 'react-icons/fa6';
+import { GiFountainPen, GiGrandPiano } from 'react-icons/gi';
 import { LuCandlestickChart } from 'react-icons/lu';
-import { GiGrandPiano } from 'react-icons/gi';
-import { GiFountainPen } from 'react-icons/gi';
 
 const icons = {
   engineer: FaCode,
@@ -10,7 +9,7 @@ const icons = {
   writing: GiFountainPen,
 };
 
-import { Engineer, Quant, Writer, Pianist } from '@/components/flow/index';
+import { Engineer, Pianist, Quant, Writer } from '@/components/flow/index';
 
 const writingPortfolio = [
   {
@@ -240,7 +239,7 @@ const createNodes = () => {
       id: `${runningIndex}`,
       type: section.type,
       data: { section: section, handles: section.handles },
-      draggable: true,
+      draggable: false,
       position: positions[index],
     };
     runningIndex++;
@@ -253,7 +252,7 @@ const createNodes = () => {
       id: `${runningIndex}`,
       type: 'portfolioNode',
       data: { section: section, handles: section.handles },
-      draggable: true,
+      draggable: false,
       position: { x: -950, y: -450 + 400 * index },
     };
     runningIndex++;
@@ -266,7 +265,7 @@ const createNodes = () => {
       id: `${runningIndex}`,
       type: 'portfolioNode',
       data: { section: section, handles: section.handles },
-      draggable: true,
+      draggable: false,
       position: { x: -500 + 450 * index, y: -650 },
     };
     runningIndex++;
@@ -279,7 +278,7 @@ const createNodes = () => {
       id: `${runningIndex}`,
       type: 'portfolioNode',
       data: { section: section, handles: section.handles },
-      draggable: true,
+      draggable: false,
       position: { x: -265 + 425 * index, y: 900 },
     };
     runningIndex++;
@@ -292,7 +291,7 @@ const createNodes = () => {
       id: `${runningIndex}`,
       type: 'portfolioNode',
       data: { section: section, handles: section.handles },
-      draggable: true,
+      draggable: false,
       position: { x: 1500, y: -450 + 400 * index },
     };
     runningIndex++;
@@ -364,4 +363,4 @@ const createEdges = () => {
   return [...edges, ...engineer, ...quant, ...pianist, ...writing];
 };
 
-export { createNodes, createEdges };
+export { createEdges, createNodes };
