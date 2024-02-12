@@ -14,21 +14,38 @@ function getHandlePosition(handlePosition: string) {
   }
 }
 
+import { FaYoutube } from 'react-icons/fa6';
+import { RiSoundcloudLine } from 'react-icons/ri';
+
 import ReactPlayer from 'react-player';
 const PortfolioNode = ({ id, data }) => {
-  console.log(data);
+  const section = data.section;
   return (
     <BaseNode data={data}>
       <div className="rounded bg-white">
-        <div className="">Image</div>
-        <div className="text-[8px]">Body</div>
-        <div className="">URL</div>
-        <ReactPlayer
-          url="https://soundcloud.com/miami-nights-1984/accelerated"
-          width="350px"
-          height="250px"
-          soundcloud
-        />
+        {section.type !== 'player' && (
+          <div className="">
+            <div className="">Image</div>
+            <div className="text-[8px]">Body</div>
+            <div className="">URL</div>
+          </div>
+        )}
+        {section.type == 'player' && (
+          <div
+            className={`${
+              section.settings.soundcloud ? 'text-orange-500' : 'text-red-500'
+            }`}
+          >
+            <div className="flex flex-row justify-center rounded-t bg-black py-2 text-center ">
+              {!section.settings.soundcloud && <FaYoutube className="pt-1" />}
+              {section.settings.soundcloud && (
+                <RiSoundcloudLine className="pt-1" />
+              )}
+              <div className="ml-2 ">{section.text}</div>
+            </div>
+            <ReactPlayer width="350px" height="250px" {...section.settings} />
+          </div>
+        )}
       </div>
     </BaseNode>
   );
@@ -53,7 +70,7 @@ const BaseNode = (props) => {
 const PPNode = ({ id, data }) => {
   return (
     <BaseNode data={data}>
-      <div className="h-28 w-28 rounded-full bg-[url('/profile-pic.png')] bg-cover bg-center shadow-2"></div>
+      <div className="h-40 w-40 rounded-full bg-[url('/profile-pic.png')] bg-cover bg-center shadow-2"></div>
     </BaseNode>
   );
 };
@@ -76,9 +93,9 @@ const SectionNode = ({ id, data }) => {
 
   return (
     <BaseNode data={data}>
-      <div className="w-[300px] rounded font-inter text-[16px] shadow-2">
+      <div className="w-[400px] rounded font-inter text-[16px] shadow-2">
         <div
-          className={`black flex flex-row justify-center rounded-t border-b-[1px] bg-black py-2 text-center ${
+          className={`black flex flex-row justify-center rounded-t border-b-4 bg-black py-2 text-center ${
             border[section.id]
           }`}
         >

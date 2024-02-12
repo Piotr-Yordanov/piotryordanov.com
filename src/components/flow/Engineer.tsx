@@ -1,25 +1,10 @@
-const portfolio = [
-  {
-    link: 'https://zeistab.com',
-    text: 'Zeistab',
-  },
-  {
-    link: 'https://hephaestus-theta.vercel.app/',
-    text: 'Hephaestus',
-  },
-  {
-    link: 'https://scalpson.piotryordanov.com/',
-    text: 'Scalpson',
-  },
-  {
-    link: 'https://gg-landingpage.vercel.app/',
-    text: 'Good Ghosting',
-  },
-];
 export default function Engineer() {
   return (
-    <div className="px-2 ">
-      <div className="">10+ years of shippping high quality webapps.</div>
+    <div className="p-6 pt-4">
+      I am a Senior Front-End developer, with over 10 years of experience
+      building tons of web apps from scratch. My journey started with
+      backbone.js, then I migrated to Angular 1, and eventually I adopted
+      React.js in which I am quite proficient and at ease.
     </div>
   );
 }

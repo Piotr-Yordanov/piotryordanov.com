@@ -41,26 +41,41 @@ const writingPortfolio = [
 
 const pianoPortfolio = [
   {
-    link: 'https://zeistab.com',
-    text: 'Zeistab',
+    type: 'player',
+    text: 'Allegorie Playlist',
+    settings: {
+      url: 'https://www.youtube.com/playlist?list=PLcq6MfI_5J69msAjQ1hZ_ozBi_yIxgZhn',
+    },
     targetHandle: 'bottom',
     handles: [{ type: 'target', position: 'top' }],
   },
   {
-    link: 'https://hephaestus-theta.vercel.app/',
-    text: 'Hephaestus',
+    type: 'player',
+    text: 'Piano Pieces',
+    settings: {
+      url: 'https%3A//api.soundcloud.com/playlists/1754035467&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true',
+      soundcloud: true,
+    },
     targetHandle: 'bottom',
     handles: [{ type: 'target', position: 'top' }],
   },
   {
-    link: 'https://scalpson.piotryordanov.com/',
-    text: 'Scalpson',
+    type: 'player',
+    text: 'Deep House Production',
+    settings: {
+      url: 'https%3A//api.soundcloud.com/playlists/42672943&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true',
+      soundcloud: true,
+    },
     targetHandle: 'bottom',
     handles: [{ type: 'target', position: 'top' }],
   },
   {
-    link: 'https://gg-landingpage.vercel.app/',
-    text: 'Good Ghosting',
+    type: 'player',
+    text: 'Voice Overs',
+    settings: {
+      url: 'https%3A//api.soundcloud.com/playlists/42672874&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true',
+      soundcloud: true,
+    },
     targetHandle: 'bottom',
     handles: [{ type: 'target', position: 'top' }],
   },
@@ -68,26 +83,37 @@ const pianoPortfolio = [
 
 const quantPortfolio = [
   {
-    link: 'https://zeistab.com',
-    text: 'Zeistab',
+    link: 'https://www.piotryordanov.com/trading#tradingview',
+    text: 'TradingView Scripts',
+    description: 'TV scripts you can use to for yourself',
     targetHandle: 'top',
     handles: [{ type: 'target', position: 'bottom' }],
   },
   {
-    link: 'https://hephaestus-theta.vercel.app/',
-    text: 'Hephaestus',
+    link: 'https://collective2.com/details/145905281',
+    text: 'Trading Bot',
+    description: 'A live trading bot that you can copy!',
+    targetHandle: 'top',
+    handles: [{ type: 'target', position: 'bottom' }],
+  },
+  {
+    link: 'https://quantbt.com/',
+    text: 'Quantbt',
+    description: 'A Hyperperformant backtester',
     targetHandle: 'top',
     handles: [{ type: 'target', position: 'bottom' }],
   },
   {
     link: 'https://scalpson.piotryordanov.com/',
     text: 'Scalpson',
+    description: 'A trading journal',
     targetHandle: 'top',
     handles: [{ type: 'target', position: 'bottom' }],
   },
   {
-    link: 'https://gg-landingpage.vercel.app/',
-    text: 'Good Ghosting',
+    link: 'https://www.piotryordanov.com/trading#youtube',
+    text: 'Live Trading',
+    description: 'Videos of me trading live!',
     targetHandle: 'top',
     handles: [{ type: 'target', position: 'bottom' }],
   },
@@ -187,10 +213,10 @@ const sections = [
 
 const positions = [
   { x: 450, y: 250 },
-  { x: 0, y: 250 },
-  { x: 350, y: 0 },
+  { x: -150, y: 200 },
+  { x: 350, y: -100 },
   { x: 350, y: 500 },
-  { x: 700, y: 250 },
+  { x: 800, y: 200 },
 ];
 const createNodes = () => {
   let runningIndex = 0;
@@ -240,7 +266,7 @@ const createNodes = () => {
       type: 'portfolioNode',
       data: { section: section, handles: section.handles },
       draggable: true,
-      position: { x: -350 + 450 * index, y: 850 },
+      position: { x: -265 + 425 * index, y: 900 },
     };
     runningIndex++;
     return newItem;
@@ -265,8 +291,8 @@ const createNodes = () => {
 const createEdges = () => {
   let runningIndex = 0;
   const edges = sections.map((section, index) => ({
-    id: `${runningIndex++}`,
     source: '0',
+    id: `${runningIndex++}`,
     target: `${index}`,
     sourceHandle: section.targetHandle,
     animated: true,

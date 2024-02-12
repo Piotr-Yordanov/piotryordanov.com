@@ -19,12 +19,12 @@ export default function New() {
       <ReactFlow
         defaultNodes={nodes}
         defaultEdges={edges}
+        defaultViewport={{ x: 800, y: 200, zoom: 1 }}
         nodeTypes={{
           sectionNode: SectionNode,
           ppNode: PPNode,
           portfolioNode: PortfolioNode,
         }}
-        fitView
         proOptions={proOptions}
       >
         <Background />
