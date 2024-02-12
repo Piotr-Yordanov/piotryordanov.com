@@ -17,10 +17,10 @@ const sections = [
     icon: icons.engineer,
     targetHandle: '',
     handles: [
-      { type: 'target', position: 'right', id: 'right' },
-      { type: 'target', position: 'top', id: 'top' },
-      { type: 'target', position: 'bottom', id: 'bottom' },
-      { type: 'target', position: 'left', id: 'left' },
+      { type: 'source', position: 'right', id: 'right' },
+      { type: 'source', position: 'top', id: 'top' },
+      { type: 'source', position: 'bottom', id: 'bottom' },
+      { type: 'source', position: 'left', id: 'left' },
     ],
   },
   {
@@ -30,7 +30,7 @@ const sections = [
     icon: icons.engineer,
     targetHandle: 'left',
     body: 'hello world',
-    handles: [{ type: 'source', position: 'right' }],
+    handles: [{ type: 'target', position: 'right' }],
   },
   {
     id: 'quant',
@@ -39,7 +39,7 @@ const sections = [
     icon: icons.trader,
     targetHandle: 'top',
     body: 'hello quant',
-    handles: [{ type: 'source', position: 'bottom' }],
+    handles: [{ type: 'target', position: 'bottom' }],
   },
   {
     id: 'pianist',
@@ -49,17 +49,17 @@ const sections = [
     targetHandle: 'bottom',
     body: 'hello world',
     color: 'indigo',
-    handles: [{ type: 'source', position: 'top' }],
+    handles: [{ type: 'target', position: 'top' }],
   },
   {
     id: 'writer',
-    label: 'Story Writer',
+    label: 'Article Writer',
     type: 'sectionNode',
     icon: icons.writing,
     targetHandle: 'right',
     body: 'hello writing',
     color: 'emerald',
-    handles: [{ type: 'source', position: 'left' }],
+    handles: [{ type: 'target', position: 'left' }],
   },
 ];
 
@@ -84,9 +84,9 @@ const createDefaultNodes = () => {
 const createDefaultEdges = () => {
   return sections.map((section, index) => ({
     id: `${index}`,
-    source: `${index}`,
-    target: '0',
-    targetHandle: section.targetHandle,
+    source: '0',
+    target: `${index}`,
+    sourceHandle: section.targetHandle,
     animated: true,
   }));
 };

@@ -15,6 +15,8 @@ export default function New() {
     (params) => setEdges((eds) => addEdge(params, eds)),
     [setEdges]
   );
+  console.log(edges);
+  console.log(nodes);
 
   return (
     <div className="h-screen w-screen bg-[#202124]">
