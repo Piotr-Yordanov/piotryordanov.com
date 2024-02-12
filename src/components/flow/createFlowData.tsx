@@ -186,11 +186,11 @@ const sections = [
 ];
 
 const positions = [
-  { x: 350, y: 130 },
-  { x: 0, y: 150 },
-  { x: 300, y: 0 },
-  { x: 300, y: 300 },
-  { x: 600, y: 150 },
+  { x: 450, y: 250 },
+  { x: 0, y: 250 },
+  { x: 350, y: 0 },
+  { x: 350, y: 500 },
+  { x: 700, y: 250 },
 ];
 const createNodes = () => {
   let runningIndex = 0;
@@ -214,7 +214,7 @@ const createNodes = () => {
       type: 'portfolioNode',
       data: { section: section, handles: section.handles },
       draggable: true,
-      position: { x: -250, y: 100 * index },
+      position: { x: -850, y: -450 + 400 * index },
     };
     runningIndex++;
     return newItem;
@@ -227,7 +227,7 @@ const createNodes = () => {
       type: 'portfolioNode',
       data: { section: section, handles: section.handles },
       draggable: true,
-      position: { x: 200 * index, y: -150 },
+      position: { x: -350 + 450 * index, y: -650 },
     };
     runningIndex++;
     return newItem;
@@ -240,7 +240,7 @@ const createNodes = () => {
       type: 'portfolioNode',
       data: { section: section, handles: section.handles },
       draggable: true,
-      position: { x: 150 * index, y: 450 },
+      position: { x: -350 + 450 * index, y: 850 },
     };
     runningIndex++;
     return newItem;
@@ -253,7 +253,7 @@ const createNodes = () => {
       type: 'portfolioNode',
       data: { section: section, handles: section.handles },
       draggable: true,
-      position: { x: 900, y: 100 * index },
+      position: { x: 1500, y: -450 + 400 * index },
     };
     runningIndex++;
     return newItem;

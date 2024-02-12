@@ -14,6 +14,7 @@ function getHandlePosition(handlePosition: string) {
   }
 }
 
+import ReactPlayer from 'react-player';
 const PortfolioNode = ({ id, data }) => {
   console.log(data);
   return (
@@ -22,6 +23,12 @@ const PortfolioNode = ({ id, data }) => {
         <div className="">Image</div>
         <div className="text-[8px]">Body</div>
         <div className="">URL</div>
+        <ReactPlayer
+          url="https://soundcloud.com/miami-nights-1984/accelerated"
+          width="350px"
+          height="250px"
+          soundcloud
+        />
       </div>
     </BaseNode>
   );
@@ -46,7 +53,7 @@ const BaseNode = (props) => {
 const PPNode = ({ id, data }) => {
   return (
     <BaseNode data={data}>
-      <div className="h-20 w-20 rounded-full bg-[url('/profile-pic.png')] bg-cover bg-center shadow-2"></div>
+      <div className="h-28 w-28 rounded-full bg-[url('/profile-pic.png')] bg-cover bg-center shadow-2"></div>
     </BaseNode>
   );
 };
@@ -69,9 +76,9 @@ const SectionNode = ({ id, data }) => {
 
   return (
     <BaseNode data={data}>
-      <div className="w-[100px] rounded font-inter text-[8px] shadow-2">
+      <div className="w-[300px] rounded font-inter text-[16px] shadow-2">
         <div
-          className={`black flex flex-row justify-center rounded-t border-b-[1px] bg-black py-1 text-center ${
+          className={`black flex flex-row justify-center rounded-t border-b-[1px] bg-black py-2 text-center ${
             border[section.id]
           }`}
         >

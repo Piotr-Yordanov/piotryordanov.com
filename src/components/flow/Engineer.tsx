@@ -18,20 +18,8 @@ const portfolio = [
 ];
 export default function Engineer() {
   return (
-    <div className="px-2 text-[8px]">
+    <div className="px-2 ">
       <div className="">10+ years of shippping high quality webapps.</div>
-      <div className="">Portfolio</div>
-      <ul className="list-disc pl-4">
-        {portfolio.map((item) => {
-          return (
-            <li key={item.text}>
-              <a href={item.link} target="_blank">
-                {item.text}
-              </a>
-            </li>
-          );
-        })}
-      </ul>
     </div>
   );
 }
