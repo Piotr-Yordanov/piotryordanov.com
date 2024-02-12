@@ -1,11 +1,3 @@
-import {
-  Inter,
-  Lato,
-  Literata,
-  Roboto_Mono,
-  Sacramento,
-} from '@next/font/google';
-
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import SectionContainer from '@/components/SectionContainer';
@@ -14,47 +6,14 @@ type Props = {
   children: React.ReactNode;
 };
 
-const inter = Inter({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-inter',
-});
-
-const roboto_mono = Roboto_Mono({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-roboto-mono',
-});
-
-const sacramento = Sacramento({
-  subsets: ['latin'],
-  weight: ['400'],
-  variable: '--font-sacramento',
-});
-
-const lato = Lato({
-  subsets: ['latin'],
-  weight: ['400', '700', '900'],
-  variable: '--font-lato',
-});
-
-const literata = Literata({
-  subsets: ['latin'],
-  variable: '--font-literata',
-});
-
 const LayoutWrapper = ({ children }: Props) => {
   return (
     <div className="flex min-h-screen w-full flex-col justify-between bg-[#f2f5fa] ">
-      <div
-        className={`${sacramento.variable} ${lato.variable} ${literata.variable} ${inter.variable} ${roboto_mono.variable}`}
-      >
-        <Header />
+      <Header />
 
-        <SectionContainer>
-          <main className="mb-auto font-sans">{children}</main>
-        </SectionContainer>
-      </div>
+      <SectionContainer>
+        <main className="mb-auto font-sans">{children}</main>
+      </SectionContainer>
 
       <Footer />
     </div>

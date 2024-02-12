@@ -6,20 +6,23 @@ import QBT from './trading_qbt';
 import YoutubeChannel from './trading_youtube';
 import TradingView from './tradingview';
 import TVTicker from './tradingview_ticker';
+import LayoutWrapper from '@/components/LayoutWrapper';
 
 const Trading: NextPage = () => {
   return (
-    <div className="relative">
-      <Hero />
-      <QBT />
-      <TradingView />
-      <TradingJournal />
-      <YoutubeChannel />
+    <LayoutWrapper>
+      <div className="relative">
+        <Hero />
+        <QBT />
+        <TradingView />
+        <TradingJournal />
+        <YoutubeChannel />
 
-      <div className="sticky bottom-[-30px] sm:mx-[-600px]">
-        <TVTicker />
+        <div className="sticky bottom-[-30px] sm:mx-[-600px]">
+          <TVTicker />
+        </div>
       </div>
-    </div>
+    </LayoutWrapper>
   );
 };
 

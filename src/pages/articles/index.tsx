@@ -5,6 +5,7 @@ import { LuCandlestickChart } from 'react-icons/lu';
 
 import CustomLink from '@/components/CustomLink';
 import LayoutPerPage from '@/components/LayoutPerPage';
+import LayoutWrapper from '@/components/LayoutWrapper';
 // ==================================================== //
 import PostList, { PostForPostList } from '@/components/PostList';
 import posts from '@/lib/contentLayerAdapter';
@@ -53,14 +54,16 @@ const sections = [
 
 const Home: NextPage = (props) => {
   return (
-    <LayoutPerPage>
-      <div className="container">
-        <div className="title mb-8 w-full text-center">Article Topics</div>
-        <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
-          {sections.map((section, index) => Section(index))}
+    <LayoutWrapper>
+      <LayoutPerPage>
+        <div className="container">
+          <div className="title mb-8 w-full text-center">Article Topics</div>
+          <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
+            {sections.map((section, index) => Section(index))}
+          </div>
         </div>
-      </div>
-    </LayoutPerPage>
+      </LayoutPerPage>
+    </LayoutWrapper>
   );
 };
 

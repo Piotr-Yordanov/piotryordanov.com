@@ -23,6 +23,43 @@ import nextI18nConfig from '../../next-i18next.config';
 NProgress.configure({ showSpinner: false });
 import { IoIosArrowUp } from 'react-icons/io';
 
+import {
+  Inter,
+  Lato,
+  Literata,
+  Roboto_Mono,
+  Sacramento,
+} from '@next/font/google';
+
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-inter',
+});
+
+const roboto_mono = Roboto_Mono({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-roboto-mono',
+});
+
+const sacramento = Sacramento({
+  subsets: ['latin'],
+  weight: ['400'],
+  variable: '--font-sacramento',
+});
+
+const lato = Lato({
+  subsets: ['latin'],
+  weight: ['400', '700', '900'],
+  variable: '--font-lato',
+});
+
+const literata = Literata({
+  subsets: ['latin'],
+  variable: '--font-literata',
+});
+
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
 
@@ -35,63 +72,65 @@ function MyApp({ Component, pageProps }: AppProps) {
   }, []);
 
   return (
-    <ThemeProvider attribute="class" defaultTheme="light">
-      <ScrollToTop
-        smooth
-        component={<IoIosArrowUp className="ml-2 h-6 w-6" />}
-      />
-      <CommandPalette>
-        <DefaultSeo
-          titleTemplate={`%s | ${siteConfigs.titleShort}`}
-          defaultTitle={siteConfigs.title}
-          description={siteConfigs.description}
-          canonical={siteConfigs.fqdn}
-          openGraph={{
-            title: siteConfigs.title,
-            description: siteConfigs.description,
-            url: siteConfigs.fqdn,
-            images: [
-              {
-                url: siteConfigs.bannerUrl,
-              },
-            ],
-            site_name: siteConfigs.title,
-            type: 'website',
-          }}
-          twitter={{
-            handle: siteConfigs.twitterID,
-            site: siteConfigs.twitterID,
-            cardType: 'summary_large_image',
-          }}
-          additionalMetaTags={[
-            {
-              name: 'viewport',
-              content: 'width=device-width, initial-scale=1',
-            },
-          ]}
-          additionalLinkTags={[
-            {
-              rel: 'icon',
-              href: siteConfigs.logoPath,
-            },
-            {
-              rel: 'alternate',
-              type: 'application/rss+xml',
-              href: '/feed.xml',
-            },
-            {
-              rel: 'alternate',
-              type: 'application/atom+xml',
-              href: '/atom.xml',
-            },
-          ]}
+    <div
+      className={`${sacramento.variable} ${lato.variable} ${literata.variable} ${inter.variable} ${roboto_mono.variable}`}
+    >
+      <ThemeProvider attribute="class" defaultTheme="light">
+        <ScrollToTop
+          smooth
+          component={<IoIosArrowUp className="ml-2 h-6 w-6" />}
         />
+        <CommandPalette>
+          <DefaultSeo
+            titleTemplate={`%s | ${siteConfigs.titleShort}`}
+            defaultTitle={siteConfigs.title}
+            description={siteConfigs.description}
+            canonical={siteConfigs.fqdn}
+            openGraph={{
+              title: siteConfigs.title,
+              description: siteConfigs.description,
+              url: siteConfigs.fqdn,
+              images: [
+                {
+                  url: siteConfigs.bannerUrl,
+                },
+              ],
+              site_name: siteConfigs.title,
+              type: 'website',
+            }}
+            twitter={{
+              handle: siteConfigs.twitterID,
+              site: siteConfigs.twitterID,
+              cardType: 'summary_large_image',
+            }}
+            additionalMetaTags={[
+              {
+                name: 'viewport',
+                content: 'width=device-width, initial-scale=1',
+              },
+            ]}
+            additionalLinkTags={[
+              {
+                rel: 'icon',
+                href: siteConfigs.logoPath,
+              },
+              {
+                rel: 'alternate',
+                type: 'application/rss+xml',
+                href: '/feed.xml',
+              },
+              {
+                rel: 'alternate',
+                type: 'application/atom+xml',
+                href: '/atom.xml',
+              },
+            ]}
+          />
 
-        <LayoutWrapper>
           <Component {...pageProps} />
-        </LayoutWrapper>
-      </CommandPalette>
-    </ThemeProvider>
+        </CommandPalette>
+      </ThemeProvider>
+    </div>
   );
 }
 
