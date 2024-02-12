@@ -37,7 +37,7 @@
   }
 
   .container {
-    @apply mx-auto max-w-full px-4 py-24 md:max-w-5xl lg:max-w-5xl;
+    @apply mx-auto max-w-full px-4 py-24 md:max-w-6xl lg:max-w-6xl;
   }
 
   .background-grid {

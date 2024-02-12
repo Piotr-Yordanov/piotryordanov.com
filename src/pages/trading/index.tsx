@@ -13,7 +13,6 @@ const Trading: NextPage = () => {
       <Hero />
       <QBT />
       <TradingView />
-
       <TradingJournal />
       <YoutubeChannel />
 

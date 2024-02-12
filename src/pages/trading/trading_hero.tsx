@@ -45,7 +45,7 @@ const TradingHero = () => {
       title="Quantitative Trading"
       subtitle="I have over 10 years of experience shipping high quality code, and trading the financial markets."
     >
-      <div className="mx-auto mt-20 flex flex-col justify-center gap-4 sm:max-w-[600px] sm:flex-row">
+      <div className="mx-auto mt-20 flex flex-col justify-center gap-4 sm:max-w-[650px] sm:flex-row">
         {sections.map((section) => (
           <CustomLink
             key={section.name}

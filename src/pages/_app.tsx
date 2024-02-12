@@ -16,6 +16,7 @@ import ScrollToTop from 'react-scroll-to-top';
 import CommandPalette from '@/components/CommandPalette';
 import LayoutWrapper from '@/components/LayoutWrapper';
 import { siteConfigs } from '@/configs/siteConfigs';
+import 'reactflow/dist/style.css';
 
 import nextI18nConfig from '../../next-i18next.config';
 
