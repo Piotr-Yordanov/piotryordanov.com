@@ -10,12 +10,122 @@ const icons = {
   writing: GiFountainPen,
 };
 
+import { Engineer, Quant, Writer, Pianist } from '@/components/flow/index';
+
+const writingPortfolio = [
+  {
+    link: 'https://zeistab.com',
+    text: 'Zeistab',
+    targetHandle: 'bottom',
+    handles: [{ type: 'target', position: 'left' }],
+  },
+  {
+    link: 'https://hephaestus-theta.vercel.app/',
+    text: 'Hephaestus',
+    targetHandle: 'bottom',
+    handles: [{ type: 'target', position: 'left' }],
+  },
+  {
+    link: 'https://scalpson.piotryordanov.com/',
+    text: 'Scalpson',
+    targetHandle: 'bottom',
+    handles: [{ type: 'target', position: 'left' }],
+  },
+  {
+    link: 'https://gg-landingpage.vercel.app/',
+    text: 'Good Ghosting',
+    targetHandle: 'bottom',
+    handles: [{ type: 'target', position: 'left' }],
+  },
+];
+
+const pianoPortfolio = [
+  {
+    link: 'https://zeistab.com',
+    text: 'Zeistab',
+    targetHandle: 'bottom',
+    handles: [{ type: 'target', position: 'top' }],
+  },
+  {
+    link: 'https://hephaestus-theta.vercel.app/',
+    text: 'Hephaestus',
+    targetHandle: 'bottom',
+    handles: [{ type: 'target', position: 'top' }],
+  },
+  {
+    link: 'https://scalpson.piotryordanov.com/',
+    text: 'Scalpson',
+    targetHandle: 'bottom',
+    handles: [{ type: 'target', position: 'top' }],
+  },
+  {
+    link: 'https://gg-landingpage.vercel.app/',
+    text: 'Good Ghosting',
+    targetHandle: 'bottom',
+    handles: [{ type: 'target', position: 'top' }],
+  },
+];
+
+const quantPortfolio = [
+  {
+    link: 'https://zeistab.com',
+    text: 'Zeistab',
+    targetHandle: 'top',
+    handles: [{ type: 'target', position: 'bottom' }],
+  },
+  {
+    link: 'https://hephaestus-theta.vercel.app/',
+    text: 'Hephaestus',
+    targetHandle: 'top',
+    handles: [{ type: 'target', position: 'bottom' }],
+  },
+  {
+    link: 'https://scalpson.piotryordanov.com/',
+    text: 'Scalpson',
+    targetHandle: 'top',
+    handles: [{ type: 'target', position: 'bottom' }],
+  },
+  {
+    link: 'https://gg-landingpage.vercel.app/',
+    text: 'Good Ghosting',
+    targetHandle: 'top',
+    handles: [{ type: 'target', position: 'bottom' }],
+  },
+];
+
+const engineerPortfolio = [
+  {
+    link: 'https://zeistab.com',
+    text: 'Zeistab',
+    targetHandle: 'left',
+    handles: [{ type: 'target', position: 'right' }],
+  },
+  {
+    link: 'https://hephaestus-theta.vercel.app/',
+    text: 'Hephaestus',
+    targetHandle: 'left',
+    handles: [{ type: 'target', position: 'right' }],
+  },
+  {
+    link: 'https://scalpson.piotryordanov.com/',
+    text: 'Scalpson',
+    targetHandle: 'left',
+    handles: [{ type: 'target', position: 'right' }],
+  },
+  {
+    link: 'https://gg-landingpage.vercel.app/',
+    text: 'Good Ghosting',
+    targetHandle: 'left',
+    handles: [{ type: 'target', position: 'right' }],
+  },
+];
+
 const sections = [
   {
     label: 'Piotr Yordanov',
     type: 'ppNode',
     icon: icons.engineer,
-    targetHandle: '',
+    targetHandle: 'left',
     handles: [
       { type: 'source', position: 'right', id: 'right' },
       { type: 'source', position: 'top', id: 'top' },
@@ -29,8 +139,11 @@ const sections = [
     type: 'sectionNode',
     icon: icons.engineer,
     targetHandle: 'left',
-    body: 'hello world',
-    handles: [{ type: 'target', position: 'right' }],
+    body: Engineer,
+    handles: [
+      { type: 'target', position: 'right' },
+      { type: 'source', position: 'left' },
+    ],
   },
   {
     id: 'quant',
@@ -38,8 +151,11 @@ const sections = [
     type: 'sectionNode',
     icon: icons.trader,
     targetHandle: 'top',
-    body: 'hello quant',
-    handles: [{ type: 'target', position: 'bottom' }],
+    body: Quant,
+    handles: [
+      { type: 'target', position: 'bottom' },
+      { type: 'source', position: 'top' },
+    ],
   },
   {
     id: 'pianist',
@@ -47,9 +163,12 @@ const sections = [
     type: 'sectionNode',
     icon: icons.music,
     targetHandle: 'bottom',
-    body: 'hello world',
+    body: Pianist,
     color: 'indigo',
-    handles: [{ type: 'target', position: 'top' }],
+    handles: [
+      { type: 'target', position: 'top' },
+      { type: 'source', position: 'bottom' },
+    ],
   },
   {
     id: 'writer',
@@ -57,41 +176,151 @@ const sections = [
     type: 'sectionNode',
     icon: icons.writing,
     targetHandle: 'right',
-    body: 'hello writing',
+    body: Writer,
     color: 'emerald',
-    handles: [{ type: 'target', position: 'left' }],
+    handles: [
+      { type: 'target', position: 'left' },
+      { type: 'source', position: 'right' },
+    ],
   },
 ];
 
 const positions = [
-  { x: 200, y: 130 },
+  { x: 350, y: 130 },
   { x: 0, y: 150 },
-  { x: 200, y: 0 },
-  { x: 200, y: 300 },
-  { x: 400, y: 150 },
+  { x: 300, y: 0 },
+  { x: 300, y: 300 },
+  { x: 600, y: 150 },
 ];
-const createDefaultNodes = () => {
-  return sections.map((section, index) => ({
-    key: index,
-    id: `${index}`,
-    type: section.type,
-    data: { section: section, handles: section.handles },
-    draggable: true,
-    position: positions[index],
-  }));
+const createNodes = () => {
+  let runningIndex = 0;
+  const mainNodes = sections.map((section, index) => {
+    const newItem = {
+      key: runningIndex,
+      id: `${runningIndex}`,
+      type: section.type,
+      data: { section: section, handles: section.handles },
+      draggable: true,
+      position: positions[index],
+    };
+    runningIndex++;
+    return newItem;
+  });
+
+  const portfolio = engineerPortfolio.map((section, index) => {
+    const newItem = {
+      key: runningIndex,
+      id: `${runningIndex}`,
+      type: 'portfolioNode',
+      data: { section: section, handles: section.handles },
+      draggable: true,
+      position: { x: -250, y: 100 * index },
+    };
+    runningIndex++;
+    return newItem;
+  });
+
+  const quant = quantPortfolio.map((section, index) => {
+    const newItem = {
+      key: runningIndex,
+      id: `${runningIndex}`,
+      type: 'portfolioNode',
+      data: { section: section, handles: section.handles },
+      draggable: true,
+      position: { x: 200 * index, y: -150 },
+    };
+    runningIndex++;
+    return newItem;
+  });
+
+  const pianist = pianoPortfolio.map((section, index) => {
+    const newItem = {
+      key: runningIndex,
+      id: `${runningIndex}`,
+      type: 'portfolioNode',
+      data: { section: section, handles: section.handles },
+      draggable: true,
+      position: { x: 150 * index, y: 450 },
+    };
+    runningIndex++;
+    return newItem;
+  });
+
+  const writing = writingPortfolio.map((section, index) => {
+    const newItem = {
+      key: runningIndex,
+      id: `${runningIndex}`,
+      type: 'portfolioNode',
+      data: { section: section, handles: section.handles },
+      draggable: true,
+      position: { x: 900, y: 100 * index },
+    };
+    runningIndex++;
+    return newItem;
+  });
+
+  return [...mainNodes, ...portfolio, ...quant, ...pianist, ...writing];
 };
 
-const createDefaultEdges = () => {
-  return sections.map((section, index) => ({
-    id: `${index}`,
+const createEdges = () => {
+  let runningIndex = 0;
+  const edges = sections.map((section, index) => ({
+    id: `${runningIndex++}`,
     source: '0',
     target: `${index}`,
     sourceHandle: section.targetHandle,
     animated: true,
   }));
+
+  const engineer = engineerPortfolio.map((section, index) => {
+    const newItem = {
+      id: `${runningIndex}`,
+      source: '1',
+      target: `${runningIndex}`,
+      sourceHandle: section.targetHandle,
+      animated: true,
+    };
+    runningIndex++;
+    return newItem;
+  });
+
+  const quant = quantPortfolio.map((section, index) => {
+    const newItem = {
+      id: `${runningIndex}`,
+      source: '2',
+      target: `${runningIndex}`,
+      sourceHandle: section.targetHandle,
+      animated: true,
+    };
+    runningIndex++;
+    return newItem;
+  });
+
+  const pianist = pianoPortfolio.map((section, index) => {
+    const newItem = {
+      id: `${runningIndex}`,
+      source: '3',
+      target: `${runningIndex}`,
+      sourceHandle: section.targetHandle,
+      animated: true,
+    };
+    runningIndex++;
+    return newItem;
+  });
+
+  const writing = writingPortfolio.map((section, index) => {
+    const newItem = {
+      id: `${runningIndex}`,
+      source: '4',
+      target: `${runningIndex}`,
+      sourceHandle: section.targetHandle,
+      animated: true,
+    };
+    runningIndex++;
+    return newItem;
+  });
+
+  return [...edges, ...engineer, ...quant, ...pianist, ...writing];
 };
 
-const initialNodes = createDefaultNodes();
-const initialEdges = createDefaultEdges();
-
-export { initialNodes, initialEdges };
+export { createNodes, createEdges };

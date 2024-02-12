@@ -14,6 +14,19 @@ function getHandlePosition(handlePosition: string) {
   }
 }
 
+const PortfolioNode = ({ id, data }) => {
+  console.log(data);
+  return (
+    <BaseNode data={data}>
+      <div className="rounded bg-white">
+        <div className="">Image</div>
+        <div className="text-[8px]">Body</div>
+        <div className="">URL</div>
+      </div>
+    </BaseNode>
+  );
+};
+
 const BaseNode = (props) => {
   return (
     <div className="">
@@ -56,9 +69,9 @@ const SectionNode = ({ id, data }) => {
 
   return (
     <BaseNode data={data}>
-      <div className="w-[100px] rounded text-center font-inter text-[8px] shadow-2">
+      <div className="w-[100px] rounded font-inter text-[8px] shadow-2">
         <div
-          className={`black flex flex-row justify-center rounded-t border-b-[1px] bg-black py-1 ${
+          className={`black flex flex-row justify-center rounded-t border-b-[1px] bg-black py-1 text-center ${
             border[section.id]
           }`}
         >
@@ -69,10 +82,12 @@ const SectionNode = ({ id, data }) => {
             {section.label}
           </div>
         </div>
-        <div className="bg-zinc-800 pt-2 text-gray-300">{section.body}</div>
+        <div className="bg-zinc-800 pt-2 text-gray-300">
+          <section.body />
+        </div>
       </div>
     </BaseNode>
   );
 };
 
-export { PPNode, SectionNode };
+export { PPNode, SectionNode, PortfolioNode };

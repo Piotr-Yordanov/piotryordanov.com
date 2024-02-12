@@ -3,31 +3,29 @@ import React, { useCallback, useState, useEffect } from 'react';
 import ReactFlow, { Background } from 'reactflow';
 
 import { useNodesState, useEdgesState } from 'reactflow';
-import { initialNodes, initialEdges } from '@/components/flow/createFlowData';
-import { PPNode, SectionNode } from '@/components/flow/nodes';
+import { createNodes, createEdges } from '@/components/flow/createFlowData';
+import { PPNode, SectionNode, PortfolioNode } from '@/components/flow/nodes';
+
+const initialNodes = createNodes();
+const initialEdges = createEdges();
 
 export default function New() {
   const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
   const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
   const proOptions = { hideAttribution: true };
 
-  const onConnect = useCallback(
-    (params) => setEdges((eds) => addEdge(params, eds)),
-    [setEdges]
-  );
-  console.log(edges);
-  console.log(nodes);
-
   return (
     <div className="h-screen w-screen bg-[#202124]">
       <ReactFlow
-        nodes={nodes}
-        edges={edges}
-        nodeTypes={{ sectionNode: SectionNode, ppNode: PPNode }}
+        defaultNodes={nodes}
+        defaultEdges={edges}
+        nodeTypes={{
+          sectionNode: SectionNode,
+          ppNode: PPNode,
+          portfolioNode: PortfolioNode,
+        }}
         fitView
         proOptions={proOptions}
-        nodesDraggable
-        onConnect={onConnect}
       >
         <Background />
       </ReactFlow>
