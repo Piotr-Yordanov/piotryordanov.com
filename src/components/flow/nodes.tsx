@@ -14,39 +14,50 @@ function getHandlePosition(handlePosition: string) {
   }
 }
 
+// -----------------------------------------------------------
 import { FaYoutube } from 'react-icons/fa6';
 import { RiSoundcloudLine } from 'react-icons/ri';
+import Image from 'next/image';
+
+// import gg from '/site-samples/gg.png';
 
 import ReactPlayer from 'react-player';
 const PortfolioNode = ({ id, data }) => {
   const section = data.section;
   return (
     <BaseNode data={data}>
-      <div className="rounded bg-white">
-        {section.type !== 'player' && (
-          <div className="">
-            <div className="">Image</div>
-            <div className="text-[8px]">Body</div>
-            <div className="">URL</div>
-          </div>
-        )}
-        {section.type == 'player' && (
-          <div
-            className={`${
-              section.settings.soundcloud ? 'text-orange-500' : 'text-red-500'
-            }`}
-          >
-            <div className="flex flex-row justify-center rounded-t bg-black py-2 text-center ">
-              {!section.settings.soundcloud && <FaYoutube className="pt-1" />}
-              {section.settings.soundcloud && (
-                <RiSoundcloudLine className="pt-1" />
-              )}
-              <div className="ml-2 ">{section.text}</div>
+      <a href={section.link} target="_blank">
+        <div className="scale-100 cursor-pointer rounded bg-zinc-800 shadow-2 transition-all ease-in hover:scale-105">
+          {section.type !== 'player' && (
+            <div className="">
+              <Image src={section.img} width={300} height={150} alt="gg" />
+              <div className="w-[300px] p-4 text-gray-300">
+                <div className="w-full border-b-[1px] border-zinc-600 pb-2">
+                  <div className="">{section.text}</div>
+                  <div className="text-xs text-gray-500">{section.link}</div>
+                </div>
+                <div className="mt-2">{section.description}</div>
+              </div>
             </div>
-            <ReactPlayer width="350px" height="250px" {...section.settings} />
-          </div>
-        )}
-      </div>
+          )}
+          {section.type == 'player' && (
+            <div
+              className={`${
+                section.settings.soundcloud ? 'text-orange-500' : 'text-red-500'
+              }`}
+            >
+              <div className="flex flex-row justify-center rounded-t bg-black py-2 text-center ">
+                {!section.settings.soundcloud && <FaYoutube className="pt-1" />}
+                {section.settings.soundcloud && (
+                  <RiSoundcloudLine className="pt-1" />
+                )}
+                <div className="ml-2 ">{section.text}</div>
+              </div>
+              <ReactPlayer width="350px" height="250px" {...section.settings} />
+            </div>
+          )}
+        </div>
+      </a>
     </BaseNode>
   );
 };

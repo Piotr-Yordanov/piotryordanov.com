@@ -123,17 +123,23 @@ const engineerPortfolio = [
   {
     link: 'https://zeistab.com',
     text: 'Zeistab',
+    description: 'A chrome extension that helps you manage bookmarks',
+    img: '/site-samples/zt.png',
     targetHandle: 'left',
     handles: [{ type: 'target', position: 'right' }],
   },
   {
     link: 'https://hephaestus-theta.vercel.app/',
+    description: 'A UI to build a trading strategy with a drag and drop UI',
+    img: '/site-samples/hepha.png',
     text: 'Hephaestus',
     targetHandle: 'left',
     handles: [{ type: 'target', position: 'right' }],
   },
   {
     link: 'https://scalpson.piotryordanov.com/',
+    description: 'A trading journal',
+    img: '/site-samples/scalpson.png',
     text: 'Scalpson',
     targetHandle: 'left',
     handles: [{ type: 'target', position: 'right' }],
@@ -141,6 +147,9 @@ const engineerPortfolio = [
   {
     link: 'https://gg-landingpage.vercel.app/',
     text: 'Good Ghosting',
+    img: '/site-samples/gg.png',
+    image: 'gg.png',
+    description: 'A passive income software',
     targetHandle: 'left',
     handles: [{ type: 'target', position: 'right' }],
   },
