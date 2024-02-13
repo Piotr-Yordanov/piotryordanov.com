@@ -80,10 +80,37 @@ const BaseNode = (props) => {
     </div>
   );
 };
+
+import { useState, useEffect } from 'react';
 const PPNode = ({ id, data }) => {
+  const [offset, setOffset] = useState({ x: 0, y: 0 });
+  useEffect(() => {
+    document.addEventListener('mousemove', (event) => {
+      const x = event.clientX;
+      const y = event.clientY;
+      const middleX = window.innerWidth / 2;
+      const middleY = window.innerHeight / 2;
+
+      const offsetX = ((x - middleX) / middleX) * 45;
+      const offsetY = ((y - middleY) / middleY) * 45;
+      setOffset({ x: offsetX, y: -1 * offsetY });
+    });
+  }, []);
+  console.log(offset);
+
   return (
     <BaseNode data={data}>
-      <div className="size-40 rounded-full bg-[url('/profile-pic.png')] bg-cover bg-center shadow-2"></div>
+      <div
+        className="ppNode bg-zinc-800 p-2 shadow-2"
+        style={{
+          transform: `perspective(5000px) rotateY(${offset.x}deg) rotateX(${offset.y}deg)`,
+        }}
+      >
+        <div className="mt-2 size-40 rounded-full bg-[url('/profile-pic.png')] bg-cover bg-center shadow-2"></div>
+        <div className="mt-4 rounded bg-black text-center text-indigo-500 shadow-2">
+          Piotr Yordanov
+        </div>
+      </div>
     </BaseNode>
   );
 };

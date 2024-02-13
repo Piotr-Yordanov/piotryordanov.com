@@ -56,3 +56,33 @@
   }
   
 }
+/* styles.css */
+.ppNode::before {
+  inset: 0.75rem;
+  border-radius: inherit;
+  background: black;
+  z-index: -1;
+  transform: translateZ(-50px);
+  filter: blur(15px);
+  opacity: 0.5;
+}
+.ppNode::after {
+  z-index: -2;
+  inset: -0.3rem;
+  background: hsl(222, 45%, 7%);
+  transform: translateZ(-50px);
+}
+.ppNode::before,
+.ppNode::after {
+  content: "";
+  position: absolute;
+  border-radius: inherit;
+}
+
+.ppNode {
+  background: hsl(222, 45%, 7%);
+  padding: 2rem;
+  border-radius: 1rem;
+
+  transform-style: preserve-3d;
+}
