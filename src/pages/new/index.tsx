@@ -28,9 +28,10 @@ function App() {
   useEffect(() => {
     if (rfInstance) {
       const isMobile = window.innerWidth < 768;
+      const firstNode = rfInstance.getNodes()[0];
       rfInstance.setCenter(
-        initialNodes[0].position.x,
-        initialNodes[0].position.y,
+        firstNode.position.x + firstNode.width / 2,
+        firstNode.position.y + firstNode.height / 2,
         { zoom: isMobile ? 0.5 : 1, duration: 500 }
       );
     }
